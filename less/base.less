@@ -1,0 +1,126 @@
+/* Defaults
+------------------------------------------------------------ */
+body,
+p,
+select,
+textarea {
+    color: @text-color;
+    font-family: @font-body;
+    font-size: @text-size;
+    line-height: 1.65;
+    margin: 0;
+    padding: 0;
+}
+
+blockquote,
+input,
+select,
+textarea,
+.author-box,
+.breadcrumb,
+.sticky,
+.taxonomy-description,
+.wp-caption {
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+}
+
+input,
+label {
+    box-sizing: border-box;
+    color: @text-color;
+    font-family: @font-body;
+    font-size: @text-size * 0.875;
+}
+
+/* Hyperlinks
+------------------------------------------------------------ */
+a {
+    color: @base;
+    text-decoration: none;
+
+    &:visited { color: @base; }
+    &:hover { text-decoration: underline; }
+
+    img { border: none; }
+}
+
+/* Body
+------------------------------------------------------------ */
+body {
+    background-color: @body-bg;
+}
+
+::-moz-selection {
+    background-color: @base;
+    color: #fff;
+}
+
+::selection {
+    background-color: @base;
+    color: #fff;
+}
+
+/* Ordered / Unordered Lists
+------------------------------------------------------------ */
+li,
+ol,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+ol li {
+    list-style-type: decimal;
+}
+
+.entry-content ol,
+.entry-content ul {
+    margin: 0;
+    padding: 0 0 25px;
+}
+
+.archive-page ul li,
+.entry-content ul li {
+    list-style-type: square;
+    margin: 0 0 0 30px;
+    padding: 0;
+}
+
+.entry-content ol li {
+    margin: 0 0 0 35px;
+}
+
+.archive-page ul ul,
+.entry-content ol ol,
+.entry-content ul ul {
+    padding: 0;
+}
+
+/* Blockquote
+------------------------------------------------------------ */
+blockquote {
+    background: url(../images/blockquote.png) no-repeat;
+    border: none;
+    margin: 5px 5px 20px;
+    padding: 25px 30px 5px 70px;
+
+    p {
+        color: #999;
+        font-style: italic;
+    }
+}
+
+
+/* Buttons
+------------------------------------------------------------ */
+
+input[type="button"],
+input[type="submit"] {
+    background-color: @base;
+    border: 1px solid @darken2;
+    cursor: pointer;
+    line-height: 19px;
+    padding: 5px 7px;
+    text-decoration: none;
+}

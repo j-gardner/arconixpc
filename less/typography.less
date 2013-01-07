@@ -1,0 +1,116 @@
+/* Defaults
+------------------------------------------------------------ */
+body,
+p,
+select,
+textarea {
+    color: @text-color;
+    font-family: @font-body;
+    font-size: @text-size;
+    line-height: round( @text-size * 1.65 );
+    margin: 0;
+    padding: 0;
+}
+
+@h1-size: @text-size * 1.5;
+
+/* Headlines
+------------------------------------------------------------ */
+
+h1,
+h2,
+h2 a,
+h2 a:visited,
+h3,
+h4,
+h5,
+h6 {
+    font-family: @font-heading;
+    line-height: 1.5625;
+}
+
+h4,
+h5,
+h6 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+h1 { font-size: 32px; }
+
+h2 {
+    font-size: 26px;
+
+    a,
+    a:visited {
+	color: @text-color;
+
+	&:hover {
+	    color: @base;
+	    text-decoration: none;
+	}
+    }
+
+}
+
+h3 { font-size: 20px; }
+
+h4 {
+    font-size: 14px;
+
+    .widgettitle {
+	font-weight: normal;
+	margin: 0 0 15px;
+    }
+}
+
+h5 { font-size: 12px; }
+
+h6 { font-size: 8px; }
+
+.entry-title {
+    font-size: 40px;
+    margin-top: 0;
+}
+
+
+/* Ordered / Unordered Lists
+------------------------------------------------------------ */
+
+.entry-content ol,
+.entry-content ul {
+    margin: 0;
+    padding: 0 0 25px;
+}
+
+.archive-page ul li,
+.entry-content ul li {
+    list-style-type: disc;
+    margin: 0 0 0 30px;
+    padding: 0;
+}
+
+.entry-content ol li {
+    margin: 0 0 0 35px;
+}
+
+.archive-page ul ul,
+.entry-content ol ol,
+.entry-content ul ul {
+    padding: 0;
+}
+
+
+/* Blockquote
+------------------------------------------------------------ */
+blockquote {
+    background: #ededed no-repeat;
+    border-left: 1px solid @darken2;
+    margin: 5px 5px 20px;
+    padding: 25px 30px 5px 70px;
+
+    p {
+        color: #777;
+        font-style: italic;
+    }
+}

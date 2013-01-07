@@ -1,0 +1,259 @@
+/* Wrap
+------------------------------------------------------------ */
+.wrap {
+    margin: 0 auto;
+    width: 1025px;
+}
+
+
+/* Inner
+------------------------------------------------------------ */
+#inner {
+    background: url(images/inner.png) transparent repeat;
+    overflow: hidden;
+    padding: 20px;
+}
+
+
+/* Taxonomy Description
+------------------------------------------------------------ */
+.taxonomy-description {
+    background-color: #fff;
+    margin: -10px 0 30px;
+    padding: 0 0 15px;
+}
+
+.taxonomy-description p {
+    font-size: 14px;
+    padding: 15px 15px 0;
+}
+
+
+/* Content-Sidebar Wrap
+------------------------------------------------------------ */
+#content-sidebar-wrap {
+    float: left;
+    margin-top: 30px;
+    width: 750px;
+}
+
+.content-sidebar #content-sidebar-wrap,
+.full-width-content #content-sidebar-wrap,
+.sidebar-content #content-sidebar-wrap {
+    width: 100%;
+}
+
+
+/* Content
+------------------------------------------------------------ */
+#content {
+    float: left;
+    padding: 10px 20px;
+    width: 410px;
+}
+
+.content-sidebar #content {
+    margin-left: 60px;
+    width: 620px;
+}
+
+.full-width-content #content {
+    width: 880px;
+}
+
+.post {
+    margin: 0 0 60px;
+    position: relative;
+}
+
+.post-edit-link {
+    font-size: 14px;
+}
+
+.entry-content {
+    overflow: hidden;
+}
+
+.entry-content p {
+    margin: 0 0 25px;
+}
+
+p.subscribe-to-comments {
+    padding: 20px 0 10px;
+}
+
+.clear {
+    clear: both;
+}
+
+.clear-line {
+    border-bottom: 1px solid #ddd;
+    clear: both;
+    margin: 0 0 25px;
+}
+
+
+/* Post Info
+------------------------------------------------------------ */
+.post-info {
+    font-size: 14px;
+    margin: -5px 0 15px;
+}
+
+
+/* Post Meta
+------------------------------------------------------------ */
+.post-meta {
+    clear: both;
+    font-size: 14px;
+    padding: 5px 0 0;
+}
+
+
+/* Author Box
+------------------------------------------------------------ */
+.author-box {
+    background-color: #f5f5f5;
+    margin: 0 0 40px;
+    overflow: hidden;
+    padding: 10px;
+
+    p {
+	font-size: 14px;
+    }
+}
+
+
+/* Sticky Posts
+------------------------------------------------------------ */
+.sticky {
+    background-color: #f5f5f5;
+    margin: -10px 0 40px;
+    padding: 20px;
+}
+
+
+/* Archive Page
+------------------------------------------------------------ */
+.archive-page {
+    float: left;
+    padding: 20px 0 0;
+    width: 45%;
+}
+
+
+/* Post Tags
+------------------------------------------------------------ */
+.tags {
+    background: url(../images/tags.png) no-repeat scroll left top transparent;
+    margin: 0 0 0 3px;
+    padding: 0 0 2px 30px;
+
+    a {
+	//background-color: #bbb;
+	background-color: lighten( @base, 50% );
+	color: @base;
+	margin-right: 3px;
+	padding: 3px 5px;
+	.radius;
+	text-decoration: none;
+
+	&:hover {
+	    background-color: @base;
+	    color: #fff;
+	}
+    }
+}
+
+/* Images
+------------------------------------------------------------ */
+.entry-content img {
+    background-color: #fff;
+    border: 2px solid @base;
+    max-width: 96%;
+    padding: 4px;
+}
+
+img {
+
+    height: auto;
+    max-width: 100%;
+
+
+    &.centered,
+    &.aligncenter {
+	display: block;
+	margin: 0 auto 10px;
+    }
+
+    &.alignnone {
+	display: inline;
+	margin: 0 0 10px;
+    }
+
+    &.alignleft {
+	display: inline;
+	margin: 0 15px 10px 0;
+    }
+
+    &.alignright {
+	display: inline;
+	margin: 0 0 10px 15px;
+    }
+
+}
+
+.avatar,
+.featuredpage img,
+.featuredpost img,
+.post-image {
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    padding: 4px;
+}
+
+.author-box .avatar {
+    background-color: #fff;
+    float: left;
+    margin: 0 10px 0 0;
+}
+
+.post-image {
+    margin: 0 10px 10px 0;
+}
+
+.comment-list li .avatar {
+    background-color: #fff;
+    float: right;
+    margin: 5px 0 0 10px;
+}
+
+.alignleft {
+    float: left;
+    margin: 0 15px 10px 0;
+}
+
+.alignright {
+    float: right;
+    margin: 0 0 10px 15px;
+}
+
+.wp-caption {
+    padding: 5px;
+    text-align: center;
+}
+
+p.wp-caption-text {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.wp-smiley,
+.wp-wink {
+    border: none;
+    float: none;
+}
+
+.gallery-caption {
+}
+
