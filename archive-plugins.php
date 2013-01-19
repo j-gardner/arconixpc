@@ -1,6 +1,26 @@
 <?php
 remove_action( 'genesis_before_post_content', 'genesis_post_info' );
-remove_action( 'genesis_after_post_content', 'genesis_post_meta' );
+//remove_action( 'genesis_after_post_content', 'genesis_post_meta' );
+
+add_filter( 'genesis_post_meta', 'arconix_plugin_archive_post_meta' );
+/**
+ * Return a custom meta for the "Plugins" archive
+ *
+ * @global object $post
+ * @param string $post_meta
+ * @return string $post_meta
+ */
+function arconix_plugin_archive_post_meta( $post_meta ){
+    global $post;
+    $slug = get_post_meta( $post->ID, '_acpl_slug', true );
+    if( ! $slug ) return '';
+
+    $details = get_wporg_custom_plugin_data( $slug );
+
+    $post_meta = 'Version: ' . $details->version . ' | ' . 'Last Updated: ' . date( 'm/d/Y', strtotime( $details->last_updated ) ) . ' | ' . 'Downloads: ' . $details->downloaded;
+
+    return $post_meta;
+}
 
 add_filter( 'pre_get_posts', 'arconix_plugin_archive_change_order' );
 /**
