@@ -17,8 +17,8 @@ function arconix_plugin_archive_post_meta( $post_meta ){
 
     $details = get_wporg_custom_plugin_data( $slug );
 
-    $post_meta = 'Version: ' . $details->version . ' | ' . 'Last Updated: ' . date( get_option( 'date_format' ), strtotime( $details->last_updated ) );
-    $post_meta .= '<span class="arconix_plugins_ago">(' . ARCONIX_PLUGINS::ago( strtotime( $details->last_updated ) ) . ')</span> | ' . 'Downloads: ' . $details->downloaded;
+    $post_meta = 'Version: ' . $details->version . ' | Last Updated: ' . date( get_option( 'date_format' ), strtotime( $details->last_updated ) );
+    $post_meta .= '<span class="arconix-plugins-ago">(' . ARCONIX_PLUGINS::ago( strtotime( $details->last_updated ) ) . ')</span> | Downloads: ' . $details->downloaded;
 
     return $post_meta;
 }
@@ -38,4 +38,3 @@ function arconix_plugin_archive_change_order( $query ) {
 }
 
 genesis();
-?>
