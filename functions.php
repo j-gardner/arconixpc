@@ -1,30 +1,37 @@
 <?php
-/* Start the engine */
+// Start the engine
 require_once( TEMPLATEPATH . '/lib/init.php' );
 
-/* Add Google fonts */
+// Child theme (do not remove)
+define( 'CHILD_THEME_NAME', 'Arconix Computers' );
+define( 'CHILD_THEME_URL', 'http://arconixpc.com' );
+define( 'CHILD_THEME_VERSION', '3.0' );
+
 add_action( 'wp_enqueue_scripts', 'arconix_load_google_fonts' );
-function arconix_load_google_fonts() {
-    wp_enqueue_style(
-    	'google-fonts',
-    	'http://fonts.googleapis.com/css?family=Droid+Sans:700',
-    	false,
-        '3.0'
-    );
-}
-
-/* Add Viewport meta tag for mobile browsers */
-function arconix_add_viewport_meta_tag() {
-    echo '<meta name="viewport" content="width=device-width, initial-scale=1.0"/>';
-}
 add_action( 'genesis_meta', 'arconix_add_viewport_meta_tag' );
+remove_action( 'genesis_before_loop', 'genesis_do_breadcrumbs' );
 
-/* Add Structural Wraps */
-add_theme_support( 'genesis-structural-wraps',
-    array( 'header', 'inner', 'footer' )
-);
+add_filter( 'genesis_footer_backtotop_text', 'arconix_footer_backtotop_text' );
+add_filter( 'genesis_footer_creds_text', 'arconix_footer_creds_text' );
+add_filter( 'genesis_comment_form_args', 'arconix_comment_form_args' );
+add_filter( 'arconix_button_shortcode_args', 'arconix_child_button_args', 20 );
 
-/* Add home widget areas */
+add_theme_support( 'genesis-structural-wraps', array( 'header', 'inner', 'footer' ) ); // Add Structural Wraps
+remove_theme_support( 'genesis-menus' ); // Unregister primary/secondary navigation menus
+
+add_image_size( 'arconix-thumb', 320, 200, TRUE ); // Add our own Image size for the portfolio
+
+genesis_set_default_layout( 'content-sidebar' );
+
+// Remove layout settings
+genesis_unregister_layout( 'content-sidebar-sidebar' );
+genesis_unregister_layout( 'sidebar-content-sidebar' );
+genesis_unregister_layout( 'sidebar-sidebar-content' );
+genesis_unregister_layout( 'sidebar-content' );
+
+unregister_sidebar( 'sidebar-alt' ); // Remove Secondary sidebar
+
+// Add additional sidebar areas
 genesis_register_sidebar( array(
     'id' => 'home-full',
     'name' => __( 'Full Width Home', 'arconix' ),
@@ -49,52 +56,79 @@ genesis_register_sidebar( array(
     'description' => __( 'This single area is below the home block.', 'arconix' )
 ) );
 
-/* Add our own Image size for the portfolio */
-add_image_size( 'arconix-thumb', 320, 200, TRUE );
+genesis_register_sidebar( array(
+    'id' => 'single-plugin',
+    'name' => __( 'Individual Plugin Plage', 'arconix' ),
+    'description' => __( 'Sidebar on Individual Plugin Pages.', 'arconix' )
+) );
 
-/* Remove Breadcrumbs */
-remove_action( 'genesis_before_loop', 'genesis_do_breadcrumbs' );
+/**
+ * Load the necessary Google Fonts
+ *
+ * @since 3.0
+ */
+function arconix_load_google_fonts() {
+    wp_enqueue_style(
+    	'google-fonts',
+    	'http://fonts.googleapis.com/css?family=Droid+Sans:700',
+    	false,
+        CHILD_THEME_VERSION
+    );
+}
 
-/* Remove nav menus */
-remove_action( 'genesis_after_header', 'genesis_do_nav' );
+/**
+ * Add Viewport meta tag for mobile browsers
+ *
+ * @since 3.0
+ */
+function arconix_add_viewport_meta_tag() {
+    echo '<meta name="viewport" content="width=device-width, initial-scale=1.0"/>';
+}
 
-/* Remove layout settings */
-genesis_unregister_layout( 'content-sidebar-sidebar' );
-genesis_unregister_layout( 'sidebar-content-sidebar' );
-genesis_unregister_layout( 'sidebar-sidebar-content' );
-
-/* Remove Secondary sidebar */
-unregister_sidebar( 'sidebar-alt' );
-
-/* Modify the "Return to Top Text" */
+/**
+ * Modify the "Return to Top" footer text
+ *
+ * @since 3.0
+ * @param string $backtotop
+ * @return string $backtotop
+ */
 function arconix_footer_backtotop_text( $backtotop ) {
-    $backtotop = '[footer_copyright] <a href="http://arcnx.co/1" class="arconix-footer-site-link">' . get_bloginfo('name') . ' </a>';
-
+    $backtotop = '[footer_copyright] <a href="http://arcnx.co/1" class="arconix-footer-site-link">' . get_bloginfo( 'name' ) . ' </a>';
     return $backtotop;
 }
-add_filter('genesis_footer_backtotop_text', 'arconix_footer_backtotop_text');
 
-/* Modify Credits section */
+/**
+ * Modify the Credits footer text
+ *
+ * @since 3.0
+ * @param string $creds
+ * @return string $creds
+ */
 function arconix_footer_creds_text( $creds ) {
     $creds = 'Powered by [footer_wordpress_link] and <a href="http://studiopress.com/themes/genesis">Genesis</a> &bull; Hosted by <a href="http://arcnx.co/ix">IX Webhosting</a> &bull; [footer_loginout]';
-
     return $creds;
 }
-add_filter( 'genesis_footer_creds_text', 'arconix_footer_creds_text' );
 
-/* Modify Comment Header text */
+/**
+ * Modify the Comment Header Text
+ *
+ * @since 3.0
+ * @param array $args
+ * @return array $args
+ */
 function arconix_comment_form_args( $args ) {
     $args['title_reply'] = 'Leave a Comment';
-
     return $args;
 }
-add_filter('genesis_comment_form_args', 'arconix_comment_form_args');
 
-/* Modify Standard Arconix Shortcodes Button Color */
+/**
+ * Modify Standard Arconix Shortcodes Button Color
+ *
+ * @since 3.0
+ * @param array $defaults
+ * @return array $defaults
+ */
 function child_button_args( $defaults ) {
-    $defaults['color'] = 'arconix';
-
+    $defaults['color'] = 'child-color';
     return $defaults;
 }
-add_filter( 'arconix_button_shortcode_args', 'arconix_child_button_args', 20 );
-?>
