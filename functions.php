@@ -12,6 +12,7 @@ add_action( 'genesis_meta', 'arconix_add_viewport_meta_tag' );
 remove_action( 'genesis_before_loop', 'genesis_do_breadcrumbs' );
 
 add_filter( 'genesis_post_info', 'arconix_post_info' );
+add_filter( 'genesis_post_meta', 'arconix_post_meta' );
 add_filter( 'genesis_footer_backtotop_text', 'arconix_footer_backtotop_text' );
 add_filter( 'genesis_footer_creds_text', 'arconix_footer_creds_text' );
 add_filter( 'genesis_comment_form_args', 'arconix_comment_form_args' );
@@ -106,6 +107,11 @@ function arconix_footer_backtotop_text( $backtotop ) {
  */
 function arconix_post_info( $post_info ) {
     return '[post_date] by [post_author_posts_link] [post_edit]';
+}
+
+
+function arconix_post_meta( $post_meta ) {
+    return '[post_categories before="Filed Under: "] [post_tags before="Tagged: "]';
 }
 
 /**
