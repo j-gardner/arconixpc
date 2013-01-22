@@ -1,88 +1,76 @@
-/* Comments
------------------------------------------------------------- */
+/*
+09 Comments
+---------------------------------------------------------------------------------------------------- */
+
 #comments,
 #respond {
-    margin: 0 0 15px;
-    overflow: hidden;
+	line-height: 1.5;
+	overflow: hidden;
+}
+
+.ping-list,
+#comments {
+	margin-bottom: 48px;
+	margin-bottom: 3rem;
 }
 
 #author,
-#comment,
 #email,
 #url {
-    margin: 10px 5px 0 0;
-    padding: 5px;
-    width: 250px;
+	width: 50%;
+}
+
+.commentmetadata,
+#author,
+#email,
+#url {
+	margin-bottom: 12px;
+	margin-bottom: 0.75rem;
 }
 
 #comment {
-    height: 150px;
-    margin: 10px 0;
-    width: 98%;
+	margin: 12px 0;
+	margin: 0.75rem 0;
 }
 
-.ping-list {
-    margin: 0 0 40px;
+label {
+	margin-left: 12px;
+	margin-left: 0.75rem;
 }
 
-.comment-list,
-.ping-list {
-    ol {
-	padding: 10px;
-    }
-
-    li {
-	font-weight: bold;
+.comment-list li,
+.ping-list li {
 	list-style-type: none;
-	margin: 15px 0 5px;
-	padding: 10px 15px;
-    }
-
-    cite {
-	font-style: normal;
-    }
+	margin-top: 24px;
+	margin-top: 1.5rem;
+	padding: 32px;
+	padding: 2rem;
 }
 
-.comment-list {
-    li ul li {
-	list-style-type: none;
-	margin-right: -16px;
-    }
+.comment-list li ul li {
+	margin-right: -32px;
+	margin-right: -2rem;
+}
+
+.comment-header {
+	overflow: hidden;
+}
+
+.comment {
+	background-color: #f5f5f5;
+	border: 2px solid #fff;
+	border-right: none;
 }
 
 .comment-content p {
-    font-size: 14px;
-    margin: 0 0 20px;
-}
-
-.commentmetadata {
-    font-size: 12px;
-    margin: 0 0 5px;
-}
-
-.reply {
-    font-size: 14px;
-    font-weight: 300;
-}
-
-.nocomments {
-    text-align: center;
-}
-
-#comments .navigation {
-    display: block;
+	margin-bottom: 24px;
+	margin-bottom: 1.5rem;
 }
 
 .bypostauthor {
 }
 
-.thread-alt,
-.thread-even {
-    background-color: #f5f5f5;
-}
-
-.alt,
-.depth-1,
-.even {
-    border: 1px solid #ddd;
+#comments .navigation {
+	margin-top: 32px;
+	margin-top: 2rem;
 }
