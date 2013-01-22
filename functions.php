@@ -93,7 +93,7 @@ function arconix_add_viewport_meta_tag() {
  * @return string $backtotop
  */
 function arconix_footer_backtotop_text( $backtotop ) {
-    $backtotop = '[footer_copyright] <a href="http://arcnx.co/1" class="arconix-footer-site-link">' . get_bloginfo( 'name' ) . ' </a>';
+    $backtotop = '[footer_copyright] <a href="http://arcnx.co/1" class="arconix-footer-site-link">' . CHILD_THEME_NAME . ' </a>';
     return $backtotop;
 }
 
