@@ -106,12 +106,18 @@ function arconix_footer_backtotop_text( $backtotop ) {
  * @return string
  */
 function arconix_post_info( $post_info ) {
-    return '[post_date] by [post_author_posts_link] [post_edit]';
+    return '[post_date] [post_comments] [post_edit]';
 }
 
-
+/**
+ * Modify the Post Meta text
+ *
+ * @since 3.0
+ * @param string $post_meta
+ * @return string
+ */
 function arconix_post_meta( $post_meta ) {
-    return '[post_categories before="Filed Under: "] [post_tags before="Tagged: "]';
+    return '[post_categories before="Filed In: "] [post_tags before="Tagged: "]';
 }
 
 /**
