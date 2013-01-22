@@ -91,11 +91,10 @@ function arconix_add_viewport_meta_tag() {
  *
  * @since 3.0
  * @param string $backtotop
- * @return string $backtotop
+ * @return string
  */
 function arconix_footer_backtotop_text( $backtotop ) {
-    $backtotop = '[footer_copyright] <a href="http://arcnx.co/1" class="arconix-footer-site-link">' . CHILD_THEME_NAME . ' </a>';
-    return $backtotop;
+    return '[footer_copyright] <a href="http://arcnx.co/1" class="arconix-footer-site-link">' . CHILD_THEME_NAME . '</a>';
 }
 
 /**
@@ -103,7 +102,7 @@ function arconix_footer_backtotop_text( $backtotop ) {
  *
  * @since 3.0
  * @param string $post_info
- * @return string $post_info
+ * @return string
  */
 function arconix_post_info( $post_info ) {
     return '[post_date] by [post_author_posts_link] [post_edit]';
@@ -114,11 +113,10 @@ function arconix_post_info( $post_info ) {
  *
  * @since 3.0
  * @param string $creds
- * @return string $creds
+ * @return string
  */
 function arconix_footer_creds_text( $creds ) {
-    $creds = 'Powered by [footer_wordpress_link] and <a href="http://studiopress.com/themes/genesis">Genesis</a> &bull; Hosted by <a href="http://arcnx.co/ix">IX Webhosting</a> &bull; [footer_loginout]';
-    return $creds;
+    return 'Powered by [footer_wordpress_link] and <a href="http://studiopress.com/themes/genesis">Genesis</a> &bull; Hosted by <a href="http://arcnx.co/ix">IX Webhosting</a> &bull; [footer_loginout]';
 }
 
 /**
