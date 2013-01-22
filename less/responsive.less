@@ -1,0 +1,102 @@
+/*
+14 Media Queries
+---------------------------------------------------------------------------------------------------- */
+
+/* Desktops, laptops and iPads (landscape) ----------- */
+
+@media only screen and (max-width: 1024px) {
+
+    #wrap {
+        max-width: 960px;
+    }
+
+}
+
+/* iPads (portrait) ----------- */
+
+@media only screen and (max-width: 768px) {
+
+    #wrap {
+        padding: 0 5%;
+    }
+
+    .wrap,
+    #footer .creds,
+    #footer .gototop,
+    #header .widget-area,
+    #inner,
+    #title-area,
+    #wrap .sidebar,
+    #wrap #content,
+    #wrap #content-sidebar-wrap,
+    #wrap #sidebar-alt {
+        width: 100%;
+    }
+
+    .genesis-nav-menu li,
+    #footer .creds,
+    #footer .gototop,
+    #header ul.genesis-nav-menu,
+    #header .search-form {
+        float: none;
+    }
+
+    .genesis-nav-menu,
+    #description,
+    #footer .creds,
+    #footer .gototop,
+    #header .search-form,
+    #title,
+    #title-area {
+        text-align: center;
+    }
+
+    .genesis-nav-menu a {
+        padding: 20px 16px;
+        padding: 1.25rem 1rem;
+    }
+
+    #title {
+        margin: 16px 0;
+        margin: 1rem 0;
+    }
+
+    #header .search-form {
+        margin: 32px auto 0;
+        margin: 2rem auto 0;
+        width: 50%;
+    }
+
+    .genesis-nav-menu li.right {
+        display: none;
+    }
+
+    #footer .wrap {
+        padding: 24px 0;
+        padding: 1.5rem 0;
+    }
+
+    #header .genesis-nav-menu {
+        margin: 0;
+    }
+
+}
+
+/* iPhones (portrait and landscape) ----------- */
+
+@media only screen and (max-width: 480px) {
+
+    html {
+        font-size: 87.5%; /* 14px base */
+    }
+
+    #header .search-form {
+        width: 100%;
+    }
+
+    .archive-page {
+        margin: 0;
+        width: 100%;
+    }
+
+}
