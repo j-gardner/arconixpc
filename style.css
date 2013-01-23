@@ -1,26 +1,53 @@
-/* Variables
------------------------------------------------------------- */
-/*   
-    Theme Name: Arconix Computers
-    Theme URI: http://arconixpc.com
-    Description: Theme for ArconixPC.com
-    Author: Arconix Computers
-    Author URI: http://arconixpc.com/
+/* Table of Contents
+------------------------------------------------------------
 
-    Version: 3.0
+	01 Defaults
+	02 Typography
+                - Font Color
+                - Font Family
+                - Font Size
+                - Font Miscellaneous
+	04 Layout
+		- Structure
+		- 1152px CSS Grid
+		- Header
+		- Main Content
+		- Post Info & Meta
+		- Column Classes
+		- Miscellaneous
+	05 Menus
+		- Primary Navigation Extras
+	06 Headings
+	07 Lists
+	08 Post Navigation
+	09 Comments
+	10 Sidebars
+	11 Footer
+		- Footer Widgets
+	12 Forms & Buttons
+		- Gravity Forms
+	13 Images & Captions
+	14 Media Queries
+		- max-width: 1024px
+		- max-width: 768px
+		- max-width: 480px
 
-    Template: genesis
-    Template Version: 1.8
-
-    The CSS, XHTML and design is released under GPL:
-    http://www.opensource.org/licenses/gpl-license.php
 */
-/* Variables
------------------------------------------------------------- */
-/** Arconix Green */
-/** Dark Gray */
-/* Mixins & Colors
------------------------------------------------------------- */
+/*
+    Theme Name:     Arconix Computers
+    Theme URI:      http://arconixpc.com
+    Description:    v3 of ArconixPC.com
+    Author:         John Gardner
+    Author URI:     http://arconixpc.com/
+
+    Version:        3.0
+
+    Template:       genesis
+    Template        Version: 1.9.1
+
+    License:        GPL-2.0+
+    License URI:    http://www.opensource.org/licenses/gpl-license.php
+*/
 /**
  * Mixins File
  *
@@ -31,23 +58,23 @@
 /**
  * Border Custom
  *
- * @param type @px - set the border thickness in pixels
- * @param type @style - border style (dotted, dashed, solid, double, groove, ridge, inset, outset)
- * @param type @top-color
- * @param type @right-color
- * @param type @bottom-color
- * @param type @left-color
+ * @param @px - set the border thickness in pixels
+ * @param @style - border style (dotted, dashed, solid, double, groove, ridge, inset, outset)
+ * @param @top-color
+ * @param @right-color
+ * @param @bottom-color
+ * @param @left-color
  *
  * @since 1.0.0
  */
 /**
  * Box Shadow
  *
- * @param type @x - horizontal position
- * @param type @y - vertical position
- * @param type @blur - size of the shadow
- * @param type @spread - positive values increase the size of the shadow, negative values decrease the size. Default is 0 (the shadow is same size as blur)
- * @param type @color - shadow color
+ * @param @x - horizontal position
+ * @param @y - vertical position
+ * @param @blur - size of the shadow
+ * @param @spread - positive values increase the size of the shadow, negative values decrease the size. Default is 0 (the shadow is same size as blur)
+ * @param @color - shadow color
  *
  * @since 1.0.0
  * @version 1.3.1
@@ -55,11 +82,11 @@
 /**
  * Inset Box Shadow
  *
- * @param type @x - horizontal position
- * @param type @y - vertical position
- * @param type @blur - size of the shadow
- * @param type @spread - positive values increase the size of the shadow, negative values decrease the size. Default is 0 (the shadow is same size as blur)
- * @param type @color - shadow color
+ * @param @x - horizontal position
+ * @param @y - vertical position
+ * @param @blur - size of the shadow
+ * @param @spread - positive values increase the size of the shadow, negative values decrease the size. Default is 0 (the shadow is same size as blur)
+ * @param @color - shadow color
  *
  * @since 1.2.1
  * @version 1.3.1
@@ -73,8 +100,8 @@
   /**
      * Horizontal Gradient
      *
-     * @param type @start-color - left
-     * @param type @end-color - right
+     * @param @start-color - left
+     * @param @end-color - right
      *
      * @since 1.1.0
      */
@@ -82,8 +109,8 @@
   /**
      * Vertical Gradient
      *
-     * @param type @start-color - top
-     * @param type @end-color - bottom
+     * @param @start-color - top
+     * @param @end-color - bottom
      *
      * @since 1.1.0
      */
@@ -91,9 +118,9 @@
   /**
      * Directional Gradient
      *
-     * @param type @start-color - top
-     * @param type @end-color - bottom
-     * @param type @deg - direction
+     * @param @start-color - top
+     * @param @end-color - bottom
+     * @param @deg - direction
      *
      * @since 1.1.0
      */
@@ -101,8 +128,8 @@
   /**
      * Radial Gradient
      *
-     * @param type @inner-color
-     * @param type @outer-color
+     * @param @inner-color
+     * @param @outer-color
      *
      * @since 1.1.0
      */
@@ -110,8 +137,8 @@
   /**
      * Striped Gradient
      *
-     * @param type @color
-     * @param type @angle
+     * @param @color
+     * @param @angle
      *
      * @since 1.1.0
      */
@@ -120,7 +147,7 @@
 /**
  * Opacity
  *
- * @param type @opacity - 0 is fully transparent, 1 is fully opaque
+ * @param @opacity - 0 is fully transparent, 1 is fully opaque
  *
  * @since 1.0.0
  * @version 1.1.0
@@ -128,7 +155,7 @@
 /**
  * Radius
  *
- * @param type @radius - single value applied to all 4 corners (5px), or each corner individually starting top-left
+ * @param @radius - single value applied to all 4 corners (5px), or each corner individually starting top-left
  *
  * @since 1.2.0
  * @version 1.3.0
@@ -136,7 +163,7 @@
 /**
  * Rotation
  *
- * @param type @deg - degree of clockwise rotation
+ * @param @deg - degree of clockwise rotation
  *
  * @since 1.0.0
  * @version 1.1.0
@@ -144,7 +171,7 @@
 /**
  * Scale
  *
- * @param type @ratio - scale the item by the provided parameter
+ * @param @ratio - scale the item by the provided parameter
  *
  * @since 1.0.0
  * @version 1.1.0
@@ -152,8 +179,8 @@
 /**
  * Transition
  *
- * @param type @duration - lenth of transition in seconds
- * @param type @ease - type of easing (linear, ease, ease-in, ease-out, ease-in-out)
+ * @param @duration - lenth of transition in seconds
+ * @param @ease - of easing (linear, ease, ease-in, ease-out, ease-in-out)
  *
 * @since 1.0.0
  * @version 1.1.0
@@ -161,10 +188,10 @@
 /**
  * Transform
  *
- * @param type @rotate - clockwise rotation
- * @param type @scale - scale the object
- * @param type @skew - skew the object
- * @param type @translate - move the object along the x-axis
+ * @param @rotate - clockwise rotation
+ * @param @scale - scale the object
+ * @param @skew - skew the object
+ * @param @translate - move the object along the x-axis
  *
  * @since 1.0.0
  * @version 1.1.0
@@ -176,61 +203,159 @@
  * @version 1.0.0
  * @link http://lesscss.org/
  */
-/** Complementary Color Scheme */
-/** Subtle Color Scheme */
-/* Base
+/* Table of Contents
+------------------------------------------------------------
+
+	01 Defaults
+	02 Typography
+                - Font Color
+                - Font Family
+                - Font Size
+                - Font Miscellaneous
+	04 Layout
+		- Structure
+		- 1152px CSS Grid
+		- Header
+		- Main Content
+		- Post Info & Meta
+		- Column Classes
+		- Miscellaneous
+	05 Menus
+		- Primary Navigation Extras
+	06 Headings
+	07 Lists
+	08 Post Navigation
+	09 Comments
+	10 Sidebars
+	11 Footer
+		- Footer Widgets
+	12 Forms & Buttons
+		- Gravity Forms
+	13 Images & Captions
+	14 Media Queries
+		- max-width: 1024px
+		- max-width: 768px
+		- max-width: 480px
+
+*/
+/* 01 Defaults
 ------------------------------------------------------------ */
-/* Defaults
------------------------------------------------------------- */
+html,
 body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
 p,
-select,
-textarea {
-  color: #333333;
-  font-family: 'Droid Serif', serif;
-  font-size: 16px;
-  line-height: 1.65;
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+input,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  border: 0;
   margin: 0;
   padding: 0;
+  vertical-align: baseline;
 }
-blockquote,
+html {
+  font-size: 100%;
+  /* 16px browser default */
+
+}
+body {
+  background-color: #2c2c2c;
+  line-height: 1;
+}
+body,
 input,
 select,
 textarea,
-.author-box,
-.breadcrumb,
-.sticky,
-.taxonomy-description,
-.wp-caption {
-  background-color: #f5f5f5;
-  border: 1px solid #ccc;
-}
-input,
-label {
+.footer-widgets-1,
+.footer-widgets-2,
+.footer-widgets-3 {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  color: #333333;
-  font-family: 'Droid Serif', serif;
-  font-size: 14px;
 }
-/* Hyperlinks
------------------------------------------------------------- */
-a {
-  color: #7e973c;
-  text-decoration: none;
-}
-a:visited {
-  color: #7e973c;
-}
-a:hover {
-  text-decoration: underline;
-}
-a img {
-  border: none;
-}
-/* Body
------------------------------------------------------------- */
-body {
-  background-color: #2c2c2c;
+a,
+a:visited,
+button,
+input[type="button"],
+input[type="submit"],
+.btn {
+  -moz-transition: all 0.1s ease-in-out;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
 }
 ::-moz-selection {
   background-color: #7e973c;
@@ -240,688 +365,856 @@ body {
   background-color: #7e973c;
   color: #fff;
 }
-/* Ordered / Unordered Lists
------------------------------------------------------------- */
-li,
-ol,
-ul {
-  margin: 0;
-  padding: 0;
-}
-ol li {
-  list-style-type: decimal;
-}
-.entry-content ol,
-.entry-content ul {
-  margin: 0;
-  padding: 0 0 25px;
-}
-.archive-page ul li,
-.entry-content ul li {
-  list-style-type: square;
-  margin: 0 0 0 30px;
-  padding: 0;
-}
-.entry-content ol li {
-  margin: 0 0 0 35px;
-}
-.archive-page ul ul,
-.entry-content ol ol,
-.entry-content ul ul {
-  padding: 0;
-}
-/* Blockquote
------------------------------------------------------------- */
-blockquote {
-  background: url(../images/blockquote.png) no-repeat;
+a img {
   border: none;
-  margin: 5px 5px 20px;
-  padding: 25px 30px 5px 70px;
 }
-blockquote p {
-  color: #999;
-  font-style: italic;
-}
-/* Buttons
------------------------------------------------------------- */
-input[type="button"],
-input[type="submit"] {
-  background-color: #7e973c;
-  border: 1px solid #232a10;
-  cursor: pointer;
-  line-height: 19px;
-  padding: 5px 7px;
-  text-decoration: none;
-}
-/* Typography
------------------------------------------------------------- */
-/* Defaults
------------------------------------------------------------- */
+/*
+02 Typography
+-------------------------------------------------------------------------------------------------------
+
+    This section covers font colors, families, size, styles and weight.
+
+    This style sheet uses rem values with a pixel fallback.
+    The rem values are calculated per the examples below:
+
+    12 / 16 =		0.75rem
+    14 / 16 =		0.875rem
+    16 / 16 =		1rem
+    18 / 16 =		1.125rem
+    20 / 16 =		1.25rem
+    24 / 16 =		1.5rem
+    30 / 16 =		1.875rem
+    36 / 16 =		2.25rem
+    42 / 16 =		2.625rem
+    48 / 16 =		3rem
+
+    Further reading on the use and compatibility of rems:
+
+    http://caniuse.com/rem
+    http://snook.ca/archives/html_and_css/font-size-with-rem
+
+*/
+/* 02a - Font Color ----------- */
+a,
 body,
-p,
-select,
-textarea {
-  color: #333333;
-  font-family: 'Droid Serif', serif;
-  font-size: 16px;
-  line-height: 26px;
-  margin: 0;
-  padding: 0;
-}
-/* Headlines
------------------------------------------------------------- */
-h1,
-h2,
 h2 a,
 h2 a:visited,
+h4.widgettitle a,
+input,
+.author,
+.date,
+.genesis-nav-menu a,
+.genesis-nav-menu li li a,
+.genesis-nav-menu li li a:link,
+.genesis-nav-menu li li a:visited,
+.post-comments,
+#title a,
+#title a:hover {
+  color: #7e973c;
+}
+a:hover,
+h2 a:hover,
+.genesis-nav-menu li a:hover,
+.genesis-nav-menu li:hover a,
+.genesis-nav-menu li li a:hover,
+.genesis-nav-menu .current-menu-item a {
+  color: #232a10;
+}
+.post-info,
+.post-meta,
+#description {
+  color: #636363;
+}
+blockquote::before,
+blockquote p,
+input,
+select,
+textarea {
+  color: #999;
+}
+button,
+input[type="button"],
+input[type="submit"],
+.btn,
+.genesis-nav-menu .highlight-menu-item a,
+.genesis-nav-menu .highlight-menu-item a:hover,
+.navigation li a,
+.navigation li a:hover,
+.navigation li.active a,
+.navigation li.disabled {
+  color: #fff;
+}
+/* 02b - Font Family ----------- */
+body,
+input,
+textarea,
+.author-box h1 {
+  font-family: 'Droid Serif', serif;
+}
+h1,
+h2,
 h3,
 h4,
 h5,
-h6 {
-  font-family: 'Cuprum', sans-serif;
-  line-height: 1.5625;
+h6,
+.entry-title a,
+#title {
+  font-family: 'Droid Sans', sans-serif;
 }
-h4,
-h5,
-h6 {
-  text-transform: uppercase;
-  letter-spacing: 2px;
+/* 02c - Font Size ----------- */
+#title {
+  font-size: 42px;
+  font-size: 2.625rem;
 }
-h1 {
+h1,
+.entry-title,
+.entry-title a {
+  font-size: 36px;
+  font-size: 2.25rem;
+}
+blockquote::before {
   font-size: 32px;
+  font-size: 2rem;
 }
 h2 {
-  font-size: 26px;
-}
-h2 a,
-h2 a:visited {
-  color: #333333;
-}
-h2 a:hover,
-h2 a:visited:hover {
-  color: #7e973c;
-  text-decoration: none;
+  font-size: 30px;
+  font-size: 1.875rem;
 }
 h3 {
+  font-size: 24px;
+  font-size: 1.5rem;
+}
+h4,
+.archive-title,
+.taxonomy-description h1,
+.widgettitle {
   font-size: 20px;
-}
-h4 {
-  font-size: 14px;
-}
-h4 .widgettitle {
-  font-weight: normal;
-  margin: 0 0 15px;
+  font-size: 1.25rem;
 }
 h5 {
-  font-size: 12px;
+  font-size: 18px;
+  font-size: 1.125rem;
 }
-h6 {
-  font-size: 8px;
+h6,
+.author-box h1,
+.sidebar h2 a {
+  font-size: 16px;
+  font-size: 1rem;
 }
-.entry-title {
-  font-size: 40px;
-  margin-top: 0;
+input,
+select,
+textarea,
+.genesis-nav-menu,
+.post-info,
+.post-meta,
+.wp-caption,
+#footer p {
+  font-size: 14px;
+  font-size: 0.875rem;
 }
-/* Ordered / Unordered Lists
------------------------------------------------------------- */
-.entry-content ol,
-.entry-content ul {
-  margin: 0;
-  padding: 0 0 25px;
-}
-.archive-page ul li,
-.entry-content ul li {
-  list-style-type: disc;
-  margin: 0 0 0 30px;
-  padding: 0;
-}
-.entry-content ol li {
-  margin: 0 0 0 35px;
-}
-.archive-page ul ul,
-.entry-content ol ol,
-.entry-content ul ul {
-  padding: 0;
-}
-/* Blockquote
------------------------------------------------------------- */
-blockquote {
-  background: #ededed no-repeat;
-  border-left: 1px solid #232a10;
-  margin: 5px 5px 20px;
-  padding: 25px 30px 5px 70px;
-}
+/* 02d - Font Miscellaneous ----------- */
 blockquote p {
-  color: #777;
   font-style: italic;
 }
-/* Header
------------------------------------------------------------- */
-#header {
-  background-color: #2c2c2c;
-  border-bottom: 1px solid #f0f0f0;
-  margin: 0 auto;
-  min-height: 99px;
-  position: relative;
-  width: 100%;
-  -webkit-box-shadow: 0 10px 20px 0 #dddddd;
-  -moz-box-shadow: 0 10px 20px 0 #dddddd;
-  box-shadow: 0 10px 20px 0 #dddddd;
+cite {
+  font-style: normal;
 }
+button,
+input[type="button"],
+input[type="submit"],
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.btn,
+.entry-title a,
+.genesis-nav-menu,
+.post-comments,
+.post-info .author,
+.post-info .date,
+.wp-caption,
+#footer p,
+#title {
+  font-weight: 700;
+}
+.wp-caption {
+  text-align: center;
+}
+h2 a,
+h2 a:visited,
+.genesis-nav-menu a,
+.navigation li a,
+.widgettitle a,
+#title a {
+  text-decoration: none;
+}
+/*
+04 Layout
+---------------------------------------------------------------------------------------------------- */
+/* 04a - Structure ----------- */
+#wrap {
+  margin: 0 auto;
+  max-width: 1152px;
+}
+#inner {
+  clear: both;
+  overflow: hidden;
+  padding-top: 40px;
+  padding-top: 2.5rem;
+}
+/* 04b - 1152px CSS Grid ----------- */
+.sidebar,
+#header .widget-area {
+  width: 30.555555555%;
+  /* 352px / 1152px */
+
+}
+.content-sidebar #content,
+.sidebar-content #content,
+#title-area {
+  width: 65.277777777%;
+  /* 752px / 1152px */
+
+}
+.content-sidebar #content-sidebar-wrap,
+.full-width-content #content,
+.full-width-content #content-sidebar-wrap,
+.sidebar-content #content-sidebar-wrap {
+  width: 100%;
+  /* 1152px / 1152px */
+
+}
+.sidebar-content #sidebar,
+#content,
+#content-sidebar-wrap,
+#footer .gototop,
+#sidebar-alt,
+#title-area {
+  float: left;
+}
+.sidebar,
+.sidebar-content #content,
+#footer .creds,
 #header .widget-area {
   float: right;
-  padding: 25px 20px 0 0;
-  width: 510px;
+}
+/* 04c - Header ----------- */
+#header {
+  border-bottom: 2px solid #1e1e1e;
+  min-height: 120px;
+  overflow: hidden;
+  padding-bottom: 32px;
+  padding-bottom: 2rem;
+}
+#title {
+  line-height: 1;
+  margin: 40px 0 8px;
+  margin: 2.5rem 0 0.5rem;
 }
 #description {
-  display: none;
+  line-height: 1.25;
 }
-/* Image Header - Partial Width
------------------------------------------------------------- */
+.header-full-width #title a,
+.header-full-width #title-area {
+  width: 100%;
+}
+.header-image #title,
+.header-image #title a,
+.header-image #title-area {
+  display: block;
+  float: left;
+  min-height: 120px;
+  overflow: hidden;
+  text-indent: -9999px;
+  width: 50%;
+}
+.header-image #description {
+  display: block;
+  overflow: hidden;
+}
+.header-image #title {
+  margin: 0;
+}
 .header-image #title-area {
   background: url(images/logo.png) no-repeat center left transparent;
 }
-.header-image #title-area,
-.header-image #title,
-.header-image #title a {
+/* 04d - Main Content ----------- */
+#content {
+  padding-bottom: 40px;
+  padding-bottom: 2.5rem;
+}
+.entry,
+.page .post.entry {
+  margin-bottom: 80px;
+  margin-bottom: 5rem;
+}
+.single .entry {
+  margin-bottom: 48px;
+  margin-bottom: 3rem;
+}
+.page .entry {
+  margin: 0;
+}
+.entry-content {
+  overflow: hidden;
+  line-height: 1.625;
+}
+.entry-content p {
+  line-height: 1.625;
+  margin-bottom: 26px;
+  margin-bottom: 1.625rem;
+}
+blockquote {
+  padding: 24px 64px;
+  padding: 1.5rem 4rem;
+}
+blockquote::before {
+  content: "“";
   display: block;
-  float: left;
-  height: 100px;
-  overflow: hidden;
-  padding: 0;
-  text-indent: -9999px;
-  width: 400px;
+  height: 0;
+  left: -20px;
+  position: relative;
+  top: -10px;
 }
-/* Navigation
------------------------------------------------------------- */
-/* Header / Primary / Secondary Navigation
------------------------------------------------------------- */
-#header .menu {
-  box-sizing: border-box;
+/* 04e - Post Info & Meta ----------- */
+.post-info,
+.post-meta {
   clear: both;
-  color: #f7f7f7;
-  font-size: 14px;
-  margin: 0 auto;
-  overflow: hidden;
-  width: 100%;
+  line-height: 1.5;
 }
-#header .menu ul {
+.post-info {
+  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
+}
+.post-meta {
+  border-top: 1px solid #ccc;
+  padding-top: 24px;
+  padding-top: 1.5rem;
+}
+.post-comments {
+  margin-left: 16px;
+  margin-left: 1rem;
+  padding-left: 20px;
+  padding-left: 1.25rem;
+}
+.categories,
+.tags {
+  display: block;
+}
+/* 04g - Miscellaneous ----------- */
+p.subscribe-to-comments {
+  padding: 24px 0 16px;
+  padding: 1.5rem 0 1rem;
+}
+p.pages,
+.clear,
+.clear-line,
+.first {
+  clear: both;
+}
+.clear-line {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 26px;
+  margin-bottom: 1.625rem;
+}
+.alignleft,
+.archive-page {
+  float: left;
+}
+.alignright {
+  float: right;
+}
+.archive-page {
+  width: 50%;
+}
+.author-box,
+.sticky {
+  margin-bottom: 80px;
+  margin-bottom: 5rem;
+}
+.author-box,
+.author-box h1,
+.taxonomy-description {
+  line-height: 1.5;
+}
+.author-box,
+.breadcrumb,
+.sticky,
+.taxonomy-description {
+  background-color: #f5f5f5;
+  margin-bottom: 48px;
+  margin-bottom: 3rem;
+  overflow: hidden;
+  padding: 32px;
+  padding: 2rem;
+}
+/*
+05 Menus
+---------------------------------------------------------------------------------------------------- */
+#header .genesis-nav-menu {
+  float: right;
+  margin-top: 48px;
+  margin-top: 3rem;
+  width: auto;
+}
+.genesis-nav-menu {
+  clear: both;
+  overflow: hidden;
+}
+.genesis-nav-menu ul {
   float: left;
   width: 100%;
 }
-#header .menu li {
+.genesis-nav-menu li {
+  display: inline-block;
   float: left;
   list-style-type: none;
+  text-align: left;
 }
-#header .menu a {
-  color: #f7f7f7;
-  display: block;
-  padding: 7px 15px 6px;
-  position: relative;
-  text-decoration: none;
+.genesis-nav-menu li.highlight-menu-item {
+  margin-left: 20px;
+  margin-left: 1.25rem;
 }
-#header .menu li a:active,
-#header .menu li a:hover,
-#header .menu .current_page_item a,
-#header .menu .current-cat a,
-#header .menu .current-menu-item a {
+.genesis-nav-menu li.highlight-menu-item a {
+  background-color: #1e1e1e;
+}
+.genesis-nav-menu li.highlight-menu-item a:hover {
+  background-color: #ff2a00;
+}
+.genesis-nav-menu li li a,
+.genesis-nav-menu li li a:link,
+.genesis-nav-menu li li a:visited {
   background-color: #fff;
-  color: #333;
-}
-.menu-primary li li a,
-.menu-primary li li a:link,
-.menu-primary li li a:visited,
-.menu-secondary li li a,
-.menu-secondary li li a:link,
-.menu-secondary li li a:visited,
-#header .menu li li a,
-#header .menu li li a:link,
-#header .menu li li a:visited {
-  background: none;
-  background-color: #fff;
-  border: 1px solid #ddd;
+  border: 1px solid #ccc;
   border-top: none;
-  color: #333;
-  font-size: 12px;
-  padding: 9px 10px 8px;
+  padding: 20px;
+  padding: 1.25rem;
   position: relative;
-  text-transform: none;
-  width: 138px;
+  width: 170px;
 }
-.menu-primary li li a:active,
-.menu-primary li li a:hover,
-.menu-secondary li li a:active,
-.menu-secondary li li a:hover,
-#header .menu li li a:active,
-#header .menu li li a:hover {
-  background-color: #f5f5f5;
-  color: #333;
-}
-.menu-primary li ul,
-.menu-secondary li ul,
-#header .menu li ul {
-  height: auto;
-  left: -9999px;
-  margin: 0 0 0 -1px;
-  position: absolute;
-  width: 160px;
-  z-index: 9999;
-}
-.menu-primary li ul a,
-.menu-secondary li ul a,
-#header .menu li ul a {
-  width: 140px;
-}
-.menu-primary li ul ul,
-.menu-secondary li ul ul,
-#header .menu li ul ul {
-  margin: -36px 0 0 159px;
-}
-.menu li:hover ul ul,
-.menu li.sfHover ul ul {
-  left: -9999px;
-}
-.menu li:hover,
-.menu li.sfHover {
+.genesis-nav-menu li li:hover,
+.genesis-nav-menu li li.sfHover {
   position: static;
 }
-ul.menu li:hover > ul,
-ul.menu li.sfHover ul,
-#header .menu li:hover > ul,
-#header .menu li.sfHover ul {
-  left: auto;
+.genesis-nav-menu li li:hover ul ul,
+.genesis-nav-menu li li.sfHover ul ul {
+  left: -9999px;
 }
-.menu-primary li a.sf-with-ul,
-.menu-secondary li a.sf-with-ul,
-#header .menu li a.sf-with-ul {
-  padding-right: 25px;
-}
-.menu li a .sf-sub-indicator,
-.menu li li a .sf-sub-indicator,
-.menu li li li a .sf-sub-indicator {
-  background: url(images/icon-plus.png) no-repeat;
-  height: 16px;
+.genesis-nav-menu li ul {
+  left: -9999px;
   position: absolute;
-  right: 8px;
+  width: 212px;
+  z-index: 99;
+}
+.genesis-nav-menu li ul ul {
+  margin: -55px 0 0 211px;
+}
+.genesis-nav-menu li a .sf-sub-indicator,
+.genesis-nav-menu li li a .sf-sub-indicator,
+.genesis-nav-menu li li li a .sf-sub-indicator {
+  position: absolute;
   text-indent: -9999px;
-  top: 10px;
-  width: 16px;
+}
+.genesis-nav-menu a {
+  display: block;
+  padding: 24px 20px;
+  padding: 1.5rem 1.25rem;
+  position: relative;
+}
+ul.genesis-nav-menu li:hover > ul,
+#header .genesis-nav-menu li:hover > ul,
+ul.genesis-nav-menu li.sfHover ul,
+#header .genesis-nav-menu li.sfHover ul {
+  left: auto;
 }
 #wpadminbar li:hover ul ul {
   left: 0;
 }
-/* Post Navigation
------------------------------------------------------------- */
-.navigation {
-  font-size: 14px;
-  overflow: hidden;
-  padding: 20px 0;
-  width: 100%;
+/*
+06 Headings
+---------------------------------------------------------------------------------------------------- */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.entry-title a {
+  line-height: 1.2;
+  margin-bottom: 16px;
+  margin-bottom: 1rem;
 }
+.author-box h1 {
+  margin: 0;
+}
+.taxonomy-description h1 {
+  margin-bottom: 4px;
+  margin-bottom: 0.25rem;
+}
+.archive-title {
+  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
+}
+/*
+07 Lists
+---------------------------------------------------------------------------------------------------- */
+.entry-content ol,
+.entry-content ul {
+  margin-bottom: 26px;
+  margin-bottom: 1.625rem;
+}
+.entry-content ol li,
+.entry-content ul li {
+  line-height: 1.625;
+  margin-left: 40px;
+  margin-left: 2.5rem;
+}
+.entry-content ol li {
+  list-style-type: decimal;
+}
+.entry-content ul li {
+  list-style-type: disc;
+}
+.entry-content ol ol,
+.entry-content ul ul {
+  margin-bottom: 0;
+}
+/*
+08 Post Navigation
+---------------------------------------------------------------------------------------------------- */
 .navigation li {
   display: inline;
 }
 .navigation li a,
 .navigation li a:hover,
-.navigation li.disabled,
+.navigation li.active a,
+.navigation li.disabled {
+  background-color: #1e1e1e;
+  border-radius: 3px;
+  cursor: pointer;
+  padding: 12px;
+  padding: 0.75rem;
+}
+.navigation li a:hover,
 .navigation li.active a {
-  background: #7e973c;
-  border: 1px solid #141414;
-  color: #f7f7f7;
-  padding: 5px 8px;
+  background-color: #ff2a00;
 }
-/* Content
------------------------------------------------------------- */
-/* Wrap
------------------------------------------------------------- */
-.wrap {
-  margin: 0 auto;
-  width: 1025px;
-}
-/* Inner
------------------------------------------------------------- */
-#inner {
-  background: url(images/inner.png) transparent repeat;
-  overflow: hidden;
-  padding: 20px;
-}
-/* Taxonomy Description
------------------------------------------------------------- */
-.taxonomy-description {
-  background-color: #fff;
-  margin: -10px 0 30px;
-  padding: 0 0 15px;
-}
-.taxonomy-description p {
-  font-size: 14px;
-  padding: 15px 15px 0;
-}
-/* Content-Sidebar Wrap
------------------------------------------------------------- */
-#content-sidebar-wrap {
-  float: left;
-  margin-top: 30px;
-  width: 750px;
-}
-.content-sidebar #content-sidebar-wrap,
-.full-width-content #content-sidebar-wrap,
-.sidebar-content #content-sidebar-wrap {
-  width: 100%;
-}
-/* Content
------------------------------------------------------------- */
-#content {
-  float: left;
-  padding: 10px 20px;
-  width: 410px;
-}
-.content-sidebar #content {
-  margin-left: 60px;
-  width: 620px;
-}
-.full-width-content #content {
-  width: 880px;
-}
-.post {
-  margin: 0 0 60px;
-  position: relative;
-}
-.post-edit-link {
-  font-size: 14px;
-}
-.entry-content {
-  overflow: hidden;
-}
-.entry-content p {
-  margin: 0 0 25px;
-}
-p.subscribe-to-comments {
-  padding: 20px 0 10px;
-}
-.clear {
-  clear: both;
-}
-.clear-line {
-  border-bottom: 1px solid #ddd;
-  clear: both;
-  margin: 0 0 25px;
-}
-/* Post Info
------------------------------------------------------------- */
-.post-info {
-  font-size: 14px;
-  margin: -5px 0 15px;
-}
-/* Post Meta
------------------------------------------------------------- */
-.post-meta {
-  clear: both;
-  font-size: 14px;
-  padding: 5px 0 0;
-}
-/* Author Box
------------------------------------------------------------- */
-.author-box {
-  background-color: #f5f5f5;
-  margin: 0 0 40px;
-  overflow: hidden;
-  padding: 10px;
-}
-.author-box p {
-  font-size: 14px;
-}
-/* Sticky Posts
------------------------------------------------------------- */
-.sticky {
-  background-color: #f5f5f5;
-  margin: -10px 0 40px;
-  padding: 20px;
-}
-/* Archive Page
------------------------------------------------------------- */
-.archive-page {
-  float: left;
-  padding: 20px 0 0;
-  width: 45%;
-}
-/* Post Tags
------------------------------------------------------------- */
-.tags {
-  background: url(../images/tags.png) no-repeat scroll left top transparent;
-  margin: 0 0 0 3px;
-  padding: 0 0 2px 30px;
-}
-.tags a {
-  background-color: #edf2e0;
-  color: #7e973c;
-  margin-right: 3px;
-  padding: 3px 5px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-  text-decoration: none;
-}
-.tags a:hover {
-  background-color: #7e973c;
-  color: #fff;
-}
-/* Images
------------------------------------------------------------- */
-.entry-content img {
-  background-color: #fff;
-  border: 2px solid #7e973c;
-  max-width: 96%;
-  padding: 4px;
-}
-img {
-  height: auto;
-  max-width: 100%;
-}
-img.centered,
-img.aligncenter {
-  display: block;
-  margin: 0 auto 10px;
-}
-img.alignnone {
-  display: inline;
-  margin: 0 0 10px;
-}
-img.alignleft {
-  display: inline;
-  margin: 0 15px 10px 0;
-}
-img.alignright {
-  display: inline;
-  margin: 0 0 10px 15px;
-}
-.avatar,
-.featuredpage img,
-.featuredpost img,
-.post-image {
-  background-color: #f5f5f5;
-  border: 1px solid #ddd;
-  padding: 4px;
-}
-.author-box .avatar {
-  background-color: #fff;
-  float: left;
-  margin: 0 10px 0 0;
-}
-.post-image {
-  margin: 0 10px 10px 0;
-}
-.comment-list li .avatar {
-  background-color: #fff;
-  float: right;
-  margin: 5px 0 0 10px;
-}
-.alignleft {
-  float: left;
-  margin: 0 15px 10px 0;
-}
-.alignright {
-  float: right;
-  margin: 0 0 10px 15px;
-}
-.wp-caption {
-  padding: 5px;
-  text-align: center;
-}
-p.wp-caption-text {
-  font-size: 14px;
-  margin: 5px 0;
-}
-.wp-smiley,
-.wp-wink {
-  border: none;
-  float: none;
-}
-/* Sidebar
------------------------------------------------------------- */
-/* Primary Sidebar
------------------------------------------------------------- */
-.sidebar {
-  display: inline;
-  float: right;
-  font-size: 14px;
-  width: 280px;
-}
-.sidebar p {
-  font-size: inherit;
-}
-.sidebar .widget {
-  margin: 0 0 15px;
-  padding: 0 0 15px;
-}
-.sidebar.widget-area ol,
-.sidebar.widget-area ul,
-.sidebar .widget-area textwidget,
-.sidebar .widget_tag_cloud div div {
-  padding: 0 15px;
-}
-.sidebar.widget-area ul li {
-  border-bottom: 1px solid #ddd;
-  list-style-type: none;
-  margin: 0 0 7px;
-  padding: 0 0 5px;
-  word-wrap: break-word;
-}
-.sidebar.widget-area ul ul li {
-  border: none;
-  margin: 0;
-}
-/* Comments
------------------------------------------------------------- */
-/* Comments
------------------------------------------------------------- */
+/*
+09 Comments
+---------------------------------------------------------------------------------------------------- */
 #comments,
 #respond {
-  margin: 0 0 15px;
+  line-height: 1.5;
   overflow: hidden;
 }
+.ping-list,
+#comments {
+  margin-bottom: 48px;
+  margin-bottom: 3rem;
+}
 #author,
-#comment,
 #email,
 #url {
-  margin: 10px 5px 0 0;
-  padding: 5px;
-  width: 250px;
+  width: 50%;
+}
+.commentmetadata,
+#author,
+#email,
+#url {
+  margin-bottom: 12px;
+  margin-bottom: 0.75rem;
 }
 #comment {
-  height: 150px;
-  margin: 10px 0;
-  width: 98%;
+  margin: 12px 0;
+  margin: 0.75rem 0;
 }
-.ping-list {
-  margin: 0 0 40px;
-}
-.comment-list ol,
-.ping-list ol {
-  padding: 10px;
+label {
+  margin-left: 12px;
+  margin-left: 0.75rem;
 }
 .comment-list li,
 .ping-list li {
-  font-weight: bold;
   list-style-type: none;
-  margin: 15px 0 5px;
-  padding: 10px 15px;
-}
-.comment-list cite,
-.ping-list cite {
-  font-style: normal;
+  margin-top: 24px;
+  margin-top: 1.5rem;
+  padding: 32px;
+  padding: 2rem;
 }
 .comment-list li ul li {
-  list-style-type: none;
-  margin-right: -16px;
+  margin-right: -32px;
+  margin-right: -2rem;
+}
+.comment-header {
+  overflow: hidden;
+}
+.comment {
+  background-color: #f5f5f5;
+  border: 2px solid #fff;
+  border-right: none;
 }
 .comment-content p {
-  font-size: 14px;
-  margin: 0 0 20px;
-}
-.commentmetadata {
-  font-size: 12px;
-  margin: 0 0 5px;
-}
-.reply {
-  font-size: 14px;
-  font-weight: 300;
-}
-.nocomments {
-  text-align: center;
+  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
 }
 #comments .navigation {
-  display: block;
+  margin-top: 32px;
+  margin-top: 2rem;
 }
-.thread-alt,
-.thread-even {
-  background-color: #f5f5f5;
+/*
+10 Sidebars
+---------------------------------------------------------------------------------------------------- */
+.sidebar {
+  display: inline;
+  line-height: 1.5;
 }
-.alt,
-.depth-1,
-.even {
-  border: 1px solid #ddd;
+.sidebar p {
+  margin-bottom: 16px;
+  margin-bottom: 1rem;
 }
-/* Footer
------------------------------------------------------------- */
-/* Footer
------------------------------------------------------------- */
-#footer {
-  border-top: 1px solid #f0f0f0;
-  clear: both;
-  color: #eee;
-  font-size: 14px;
-  margin: 0 auto;
+.sidebar .widget {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 32px;
+  margin-bottom: 2rem;
+  padding-bottom: 32px;
+  padding-bottom: 2rem;
   overflow: hidden;
-  padding-top: 15px;
-  width: 100%;
 }
-#footer a,
-#footer a:hover,
-#footer a:visited {
-  color: #f7f7f7;
-  font-size: inherit;
+.sidebar.widget-area ul li {
+  list-style-type: none;
+  margin-bottom: 6px;
+  margin-bottom: 0.375rem;
+  word-wrap: break-word;
 }
-#footer a:hover {
-  text-decoration: underline;
-}
-#footer p {
-  /*color: #a7a7a7;*/
-
-  color: #acacac;
-  font-size: inherit;
+/*
+11 Footer
+---------------------------------------------------------------------------------------------------- */
+#footer {
+  clear: both;
 }
 #footer .wrap {
+  border-top: 2px solid #1e1e1e;
   overflow: hidden;
-  padding: 10px 15px;
-}
-#footer .gototop {
-  float: left;
-  width: 35%;
+  padding: 48px 0;
+  padding: 3rem 0;
 }
 #footer .creds {
-  float: right;
   text-align: right;
-  width: 65%;
 }
-/* Widgets
------------------------------------------------------------- */
+#footer .creds,
+#footer .gototop {
+  margin: 8px 0;
+  margin: 0.5rem 0;
+}
+/*
+12 Forms & Buttons
+---------------------------------------------------------------------------------------------------- */
+input,
+select,
+textarea {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  box-shadow: 0 0 5px #ddd inset;
+  padding: 16px;
+  padding: 1rem;
+  width: 100%;
+}
+#header .search-form {
+  float: right;
+  margin-top: 56px;
+  margin-top: 3.5rem;
+  width: 100%;
+}
+button,
+input[type="button"],
+input[type="submit"],
+.btn {
+  background-color: #1e1e1e;
+  border: none;
+  box-shadow: none;
+  cursor: pointer;
+  padding: 16px 24px;
+  padding: 1rem 1.5rem;
+  width: auto;
+}
+button:hover,
+input:hover[type="button"],
+input:hover[type="submit"],
+.btn:hover {
+  background-color: #ff2a00;
+}
+.enews input[type="submit"],
+.search-form input[type="submit"] {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+/* 12a - Gravity Forms ----------- */
+#content div.gform_wrapper input,
+#content div.gform_wrapper select,
+#content div.gform_wrapper textarea,
+#content div.gform_wrapper .ginput_complex label {
+  font-size: 16px;
+  font-size: 1rem;
+  padding: 16px;
+  padding: 1rem;
+}
+#content div.gform_wrapper input[type="submit"] {
+  padding: 16px 24px;
+  padding: 1rem 1.5rem;
+}
+#content div.gform_wrapper .ginput_complex label {
+  padding: 0;
+}
+div.gform_wrapper li,
+div.gform_wrapper form li {
+  margin: 16px 0 0;
+  margin: 1rem 0 0;
+}
+/*
+13 Images & Captions
+---------------------------------------------------------------------------------------------------- */
+embed,
+img,
+object,
+video {
+  max-width: 100%;
+}
+img {
+  height: auto;
+}
+.alignleft .avatar {
+  margin-right: 24px;
+  margin-right: 1.5rem;
+}
+.alignright .avatar {
+  margin-left: 24px;
+  margin-left: 1.5rem;
+}
+.author-box .avatar {
+  float: left;
+  margin-right: 24px;
+  margin-right: 1.5rem;
+}
+.comment-list li .avatar {
+  float: left;
+  margin: 0 16px 24px 0;
+  margin: 0 1rem 1.5rem 0;
+}
+img.centered,
+.aligncenter {
+  display: block;
+  margin: 0 auto 24px;
+  margin: 0 auto 1.5rem;
+}
+img.alignnone {
+  display: inline;
+  margin-bottom: 12px;
+  margin-bottom: 0.75rem;
+}
+img.alignleft,
+.post-image,
+.wp-caption.alignleft {
+  display: inline;
+  margin: 0 24px 24px 0;
+  margin: 0 1.5rem 1.5rem 0;
+}
+img.alignright,
+.wp-caption.alignright {
+  display: inline;
+  margin: 0 0 24px 24px;
+  margin: 0 0 1.5rem 1.5rem;
+}
+p.wp-caption-text {
+  line-height: 1.2;
+  margin-top: 12px;
+  margin-top: 0.75rem;
+}
+/*
+14 Media Queries
+---------------------------------------------------------------------------------------------------- */
+/* Desktops, laptops and iPads (landscape) ----------- */
+@media only screen and (max-width: 1024px) {
+  #wrap {
+    max-width: 960px;
+  }
+}
+/* iPads (portrait) ----------- */
+@media only screen and (max-width: 768px) {
+  #wrap {
+    padding: 0 5%;
+  }
+  .wrap,
+  #footer .creds,
+  #footer .gototop,
+  #header .widget-area,
+  #inner,
+  #title-area,
+  #wrap .sidebar,
+  #wrap #content,
+  #wrap #content-sidebar-wrap,
+  #wrap #sidebar-alt {
+    width: 100%;
+  }
+  .genesis-nav-menu li,
+  #footer .creds,
+  #footer .gototop,
+  #header ul.genesis-nav-menu,
+  #header .search-form {
+    float: none;
+  }
+  .genesis-nav-menu,
+  #description,
+  #footer .creds,
+  #footer .gototop,
+  #header .search-form,
+  #title,
+  #title-area {
+    text-align: center;
+  }
+  .genesis-nav-menu a {
+    padding: 20px 16px;
+    padding: 1.25rem 1rem;
+  }
+  #title {
+    margin: 16px 0;
+    margin: 1rem 0;
+  }
+  #header .search-form {
+    margin: 32px auto 0;
+    margin: 2rem auto 0;
+    width: 50%;
+  }
+  .genesis-nav-menu li.right {
+    display: none;
+  }
+  #footer .wrap {
+    padding: 24px 0;
+    padding: 1.5rem 0;
+  }
+  #header .genesis-nav-menu {
+    margin: 0;
+  }
+}
+/* iPhones (portrait and landscape) ----------- */
+@media only screen and (max-width: 480px) {
+  html {
+    font-size: 87.5%;
+    /* 14px base */
+  
+  }
+  #header .search-form {
+    width: 100%;
+  }
+  .archive-page {
+    margin: 0;
+    width: 100%;
+  }
+}
