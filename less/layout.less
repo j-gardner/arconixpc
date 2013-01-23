@@ -68,38 +68,41 @@
     margin: 2.5rem 0 0.5rem;
 }
 
-.header-image #title {
-    margin: 0;
-}
-
 #description {
     line-height: 1.25;
 }
 
-.header-full-width #title,
-.header-full-width #title a,
-.header-full-width #title-area {
-    width: 100%;
+.header-full-width {
+    #title a,
+    #title-area {
+        width: 100%;
+    }
 }
 
-.header-image #title-area {
-    background: url(images/logo.png) no-repeat center left transparent;
-}
+.header-image {
+    #title,
+    #title a,
+    #title-area {
+       display: block;
+        float: left;
+        min-height: 120px;
+        overflow: hidden;
+        text-indent: -9999px;
+        width: 50%;
+    }
 
-.header-image #title,
-.header-image #title a,
-.header-image #title-area {
-    display: block;
-    float: left;
-    min-height: 120px;
-    overflow: hidden;
-    text-indent: -9999px;
-    width: 50%;
-}
+    #description {
+        display: block;
+        overflow: hidden;
+    }
 
-.header-image #description {
-    display: block;
-    overflow: hidden;
+    #title {
+        margin: 0;
+    }
+
+    #title-area {
+        background: url(images/logo.png) no-repeat center left transparent;
+    }
 }
 
 /* 04d - Main Content ----------- */
@@ -126,30 +129,28 @@
 
 .entry-content {
     overflow: hidden;
-}
-
-.entry-content,
-.entry-content p {
     line-height: 1.625;
-}
 
-.entry-content p {
-    margin-bottom: 26px;
-    margin-bottom: 1.625rem;
+    p {
+        line-height: 1.625;
+        margin-bottom: 26px;
+        margin-bottom: 1.625rem;
+    }
+
 }
 
 blockquote {
     padding: 24px 64px;
     padding: 1.5rem 4rem;
-}
 
-blockquote::before {
-    content: "“";
-    display: block;
-    height: 0;
-    left: -20px;
-    position: relative;
-    top: -10px;
+    &::before {
+        content: "“";
+        display: block;
+        height: 0;
+        left: -20px;
+        position: relative;
+        top: -10px;
+    }
 }
 
 /* 04e - Post Info & Meta ----------- */
@@ -165,18 +166,18 @@ blockquote::before {
     margin-bottom: 1.5rem;
 }
 
-.post-comments {
-    /*background: url(images/post-comments.png) no-repeat center left;*/
-    margin-left: 16px;
-    margin-left: 1rem;
-    padding-left: 20px;
-    padding-left: 1.25rem;
-}
-
 .post-meta {
     border-top: 1px solid #ccc;
     padding-top: 24px;
     padding-top: 1.5rem;
+}
+
+.post-comments {
+    //background: url(images/post-comments.png) no-repeat center left;
+    margin-left: 16px;
+    margin-left: 1rem;
+    padding-left: 20px;
+    padding-left: 1.25rem;
 }
 
 .categories,
