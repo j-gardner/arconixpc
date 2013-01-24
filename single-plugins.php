@@ -5,17 +5,6 @@ remove_action( 'genesis_after_post', 'genesis_do_author_box_single' );
 add_action( 'get_header', 'arconix_change_genesis_sidebar' );
 add_filter( 'arconix_plugins_content_filter', 'arconix_single_plugin_filter' );
 
-// Change the sidebar that's loaded on this page
-function arconix_change_genesis_sidebar() {
-    remove_action( 'genesis_sidebar', 'genesis_do_sidebar' );
-    add_action( 'genesis_sidebar', 'arconix_custom_sidebar' );
-}
-
-// Output the custom sidebar
-function arconix_custom_sidebar() {
-    genesis_widget_area( 'single-plugin' );
-}
-
 /**
  * Customize the content shown on this page
  *

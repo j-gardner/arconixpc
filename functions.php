@@ -58,12 +58,6 @@ genesis_register_sidebar( array(
     'description' => __( 'This single area is below the home block.', 'arconix' )
 ) );
 
-genesis_register_sidebar( array(
-    'id' => 'single-plugin',
-    'name' => __( 'Individual Plugin Plage', 'arconix' ),
-    'description' => __( 'Sidebar on Individual Plugin Pages.', 'arconix' )
-) );
-
 /**
  * Load the necessary Google Fonts
  *
