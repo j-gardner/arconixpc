@@ -7,6 +7,7 @@ define( 'CHILD_THEME_NAME', 'Arconix Computers' );
 define( 'CHILD_THEME_URL', 'http://arconixpc.com' );
 define( 'CHILD_THEME_VERSION', '3.0' );
 
+add_action( 'init', 'arconix_post_type_supports' );
 add_action( 'wp_enqueue_scripts', 'arconix_load_google_fonts' );
 add_action( 'genesis_meta', 'arconix_add_viewport_meta_tag' );
 remove_action( 'genesis_before_loop', 'genesis_do_breadcrumbs' );
@@ -57,6 +58,24 @@ genesis_register_sidebar( array(
     'name' => __( 'Feature-Footer', 'arconix' ),
     'description' => __( 'This single area is below the home block.', 'arconix' )
 ) );
+
+/**
+ * Add post type support for genesis-specific options
+ *
+ * @since 3.0
+ */
+function arconix_post_type_supports() {
+    $post_types = array( 'plugins', 'portfolio' );
+    $supports = array( 'genesis-seo', 'genesis-simple-sidebars', 'genesis-layouts' );
+
+    foreach( $post_types as $post_type ) {
+        if( ! post_type_exists( $post_type ) ) continue;
+
+        foreach ( $supports as $support ) {
+            add_post_type_support( $post_type, $support ) ;
+        }
+    }
+}
 
 /**
  * Load the necessary Google Fonts
