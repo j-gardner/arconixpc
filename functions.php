@@ -17,16 +17,16 @@ add_filter( 'genesis_post_meta', 'arconix_post_meta' );
 add_filter( 'genesis_footer_backtotop_text', 'arconix_footer_backtotop_text' );
 add_filter( 'genesis_footer_creds_text', 'arconix_footer_creds_text' );
 add_filter( 'genesis_comment_form_args', 'arconix_comment_form_args' );
-add_filter( 'arconix_button_shortcode_args', 'arconix_child_button_args', 20 );
+add_filter( 'arconix_button_shortcode_args', 'arconix_child_button_args' );
+add_filter( 'arconix_portfolio_post_type_args', 'arconix_child_portfolio_args' );
 
 add_theme_support( 'genesis-structural-wraps', array( 'header', 'inner', 'footer' ) ); // Add Structural Wraps
 remove_theme_support( 'genesis-menus' ); // Unregister primary/secondary navigation menus
 
 add_image_size( 'arconix-thumb', 320, 200, TRUE ); // Add our own Image size for the portfolio
 
+// Configure layout settings
 genesis_set_default_layout( 'content-sidebar' );
-
-// Remove layout settings
 genesis_unregister_layout( 'content-sidebar-sidebar' );
 genesis_unregister_layout( 'sidebar-content-sidebar' );
 genesis_unregister_layout( 'sidebar-sidebar-content' );
@@ -58,6 +58,9 @@ genesis_register_sidebar( array(
     'name' => __( 'Feature-Footer', 'arconix' ),
     'description' => __( 'This single area is below the home block.', 'arconix' )
 ) );
+
+// Sets Content Width
+$content_width = apply_filters( 'content_width', 740, 740, 1140 );
 
 /**
  * Add post type support for genesis-specific options
@@ -163,7 +166,18 @@ function arconix_comment_form_args( $args ) {
  * @param array $defaults
  * @return array $defaults
  */
-function child_button_args( $defaults ) {
-    $defaults['color'] = 'child-color';
+function arconix_child_button_args( $defaults ) {
+    $defaults['color'] = 'green';
     return $defaults;
+}
+
+/**
+ * Modify the post type registration for the portfolio so we can use the CPT archive instead of the shortcode
+ *
+ * @param array $args
+ * @return boolean $args
+ */
+function arconix_child_portfolio_args( $args ) {
+    $args['has_archive'] = true;
+    return $args;
 }
