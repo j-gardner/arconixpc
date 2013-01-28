@@ -30,7 +30,7 @@
 .box-shadow( @x: 0, @y: 1px, @blur: 2px, @spread: 0, @color: #ccc ) {
     -webkit-box-shadow: @arguments;
        -moz-box-shadow: @arguments;
-	    box-shadow: @arguments;
+	        box-shadow: @arguments;
 }
 
 // Inset Box Shadow
@@ -44,7 +44,7 @@
 .box-shadow-inset( @x: 0px, @y: 1px, @blur: 2px, @spread: 0, @color: #ccc ) {
     -webkit-box-shadow: inset @arguments;
        -moz-box-shadow: inset @arguments;
-	    box-shadow: inset @arguments;
+	        box-shadow: inset @arguments;
 }
 
 // Box Sizing
@@ -66,15 +66,15 @@
     // @param @end-color - right
     // @since 1.4.0
     .horizontal( @start-color: #555, @end-color: #333 ) {
-	background-color: mix( @start-color, @end-color, 60% );
+    	background-color: mix( @start-color, @end-color, 60% );
         background-image: -webkit-linear-gradient( left, @start-color, @end-color ); // Safari 5.1+, Chrome 10+
            background-image: -moz-linear-gradient( left, @start-color, @end-color ); // FF 3.6+
             background-image: -ms-linear-gradient( left, @start-color, @end-color ); // IE10
              background-image: -o-linear-gradient( left, @start-color, @end-color ); // Opera 11.10
                background-image: -webkit-gradient( linear, 0 0, 100% 0, from( @start-color ), to( @end-color ) ); // Safari 4+, Chrome 2+
                 background-image: linear-gradient( left, @start-color, @end-color ); // The standard
-	background-repeat: repeat-x;
-	filter: e( %( "progid:DXImageTransform.Microsoft.gradient(start-colorstr='%d', end-colorstr='%d', GradientType=1)", @start-color, @end-color ) ); // IE9 and down
+        background-repeat: repeat-x;
+        filter: e( %( "progid:DXImageTransform.Microsoft.gradient(start-colorstr='%d', end-colorstr='%d', GradientType=1)", @start-color, @end-color ) ); // IE9 and down
     }
 
     // Vertical Gradient
@@ -90,8 +90,8 @@
              background-image: -o-linear-gradient( top, @start-color, @end-color ); // Opera 11.10
                background-image: -webkit-gradient( linear, 0 0, 0 100%, from( @start-color ), to( @end-color ) ); // Safari 4+, Chrome 2+
                 background-image: linear-gradient( top, @start-color, @end-color ); // The standard
-	background-repeat: repeat-x;
-	filter: e( %( "progid:DXImageTransform.Microsoft.gradient(start-colorstr='%d', end-colorstr='%d', GradientType=0)", @start-color, @end-color ) ); // IE9 and down
+        background-repeat: repeat-x;
+	    filter: e( %( "progid:DXImageTransform.Microsoft.gradient(start-colorstr='%d', end-colorstr='%d', GradientType=0)", @start-color, @end-color ) ); // IE9 and down
     }
 
     // Directional Gradient
@@ -100,9 +100,9 @@
     // @param @deg - direction
     // @since 1.4.0
     .directional( @start-color: #555, @end-color: #333, @deg: 45deg ) {
-	background-color: mix( @start-color, @end-color, 60% );
-	background-repeat: repeat-x;
-	background-image: -webkit-linear-gradient( @deg, @start-color, @end-color ); // Safari 5.1+, Chrome 10+
+    	background-color: mix( @start-color, @end-color, 60% );
+    	background-repeat: repeat-x;
+    	background-image: -webkit-linear-gradient( @deg, @start-color, @end-color ); // Safari 5.1+, Chrome 10+
            background-image: -moz-linear-gradient( @deg, @start-color, @end-color ); // FF 3.6+
             background-image: -ms-linear-gradient( @deg, @start-color, @end-color ); // IE10
              background-image: -o-linear-gradient( @deg, @start-color, @end-color ); // Opera 11.10
@@ -114,7 +114,7 @@
     // @param @outer-color
     // @since 1.4.0
     .radial( @inner-color: #555, @outer-color: #333 ) {
-	background-color: mix( @start-color, @end-color, 60% );
+	    background-color: mix( @start-color, @end-color, 60% );
         background-repeat: no-repeat;
         background-image: -webkit-radial-gradient( circle, @inner-color, @outer-color); // Safari 5.1+, Chrome 10+
            background-image: -moz-radial-gradient( circle, @inner-color, @outer-color); // FF 3.6+
@@ -129,8 +129,8 @@
     // @param @angle
     // @since 1.1.0
     .striped( @color, @angle: -45deg ) {
-	background-color: @color;
-	background-image: -webkit-linear-gradient( @angle, rgba( 255, 255, 255, .15 ) 25%, transparent 25%, transparent 50%, rgba( 255, 255, 255, .15 ) 50%, rgba( 255, 255, 255, .15 ) 75%, transparent 75%, transparent );
+    	background-color: @color;
+    	background-image: -webkit-linear-gradient( @angle, rgba( 255, 255, 255, .15 ) 25%, transparent 25%, transparent 50%, rgba( 255, 255, 255, .15 ) 50%, rgba( 255, 255, 255, .15 ) 75%, transparent 75%, transparent );
            background-image: -moz-linear-gradient( @angle, rgba( 255, 255, 255, .15 ) 25%, transparent 25%, transparent 50%, rgba( 255, 255, 255, .15 ) 50%, rgba( 255,255,255,.15 ) 75%, transparent 75%, transparent );
             background-image: -ms-linear-gradient( @angle, rgba( 255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba( 255, 255, 255, .15) 50%, rgba(255,255,255,.15) 75%, transparent 75%, transparent );
              background-image: -o-linear-gradient( @angle, rgba( 255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba( 255, 255, 255, .15) 50%, rgba(255,255,255,.15) 75%, transparent 75%, transparent );
@@ -156,7 +156,7 @@
     -webkit-border-radius: @radius;
        -moz-border-radius: @radius;
          -o-border-radius: @radius;
-	    border-radius: @radius;
+	        border-radius: @radius;
 }
 
 
@@ -168,7 +168,7 @@
     -webkit-transform: rotate( @deg );
        -moz-transform: rotate( @deg );
          -o-transform: rotate( @deg );
-	    transform: rotate( @deg );
+	        transform: rotate( @deg );
 }
 
 // Scale
@@ -179,7 +179,7 @@
     -webkit-transform: scale( @ratio );
        -moz-transform: scale( @ratio );
          -o-transform: scale( @ratio );
-	    transform: scale( @ratio );
+	        transform: scale( @ratio );
 }
 
 // Transition
@@ -187,11 +187,11 @@
 // @param @ease - of easing (linear, ease, ease-in, ease-out, ease-in-out)
 // @since 1.0.0
 // @version 1.4.0
-.transition( @duration: 0.1s, @ease: linear, @property: all ) {
+.transition( @duration: 0.1s, @ease: ease-in-out, @property: all ) {
     -webkit-transition: @property @duration @ease;
        -moz-transition: @property @duration @ease;
-	 -o-transition: @property @duration @ease;
-	    transition: @property @duration @ease;
+	     -o-transition: @property @duration @ease;
+	        transition: @property @duration @ease;
 }
 
 // Transform
@@ -204,7 +204,7 @@
 .transform( @rotate: 90deg, @scale: 1, @skew: 1deg, @translate: 10px ) {
     -webkit-transform: rotate( @rotate ) scale( @scale ) skew( @skew ) translate( @translate );
        -moz-transform: rotate( @rotate ) scale( @scale ) skew( @skew ) translate( @translate );
-	-ms-transform: rotate( @rotate ) scale( @scale ) skew( @skew ) translate( @translate );
-	 -o-transform: rotate( @rotate ) scale( @scale ) skew( @skew ) translate( @translate );
-	    transform: rotate( @rotate ) scale( @scale ) skew( @skew ) translate( @translate );
+	    -ms-transform: rotate( @rotate ) scale( @scale ) skew( @skew ) translate( @translate );
+	     -o-transform: rotate( @rotate ) scale( @scale ) skew( @skew ) translate( @translate );
+	        transform: rotate( @rotate ) scale( @scale ) skew( @skew ) translate( @translate );
 }

@@ -1,0 +1,66 @@
+// Variables
+// -----------------------------------------------------------
+
+// Global
+// -------------------------
+@base: 					#7e973c;        // Arconix Green
+@gradient-light: 		#a3c23e;    	// Arconix Green Light
+@gradient-dark: 		#79903c;     	// Arconix Green Dark
+
+
+// Grays
+// -------------------------
+@black:                 #000;
+@gray-darker:           #222;
+@gray-dark:             #333;
+@gray:                  #555;
+@gray-light:            #999;
+@gray-lighter:          #eee;
+@white:                 #fff;
+
+
+// Accent colors
+// -------------------------
+@blue:                  #049cdb;
+@blue-dark:             #0064cd;
+@green:                 #46a546;
+@red:                   #9d261d;
+@yellow:                #ffc40d;
+@orange:                #f89406;
+
+
+// Complementary Colors
+// -------------------------
+@complement1: spin( @base, 180 );
+@complement2: darken( spin( @base, 180 ), 5% );
+
+@lighten15: lighten( @base, 15% );
+@lighten30: lighten( @base, 30% );
+@lighten50: lighten( @base, 50% );
+
+@darken15: darken( @base, 15% );
+@darken30: darken( @base, 30% );
+@darken50: darken( @base, 50% );
+
+
+// Subtle Colors
+// -------------------------
+@lighter10: lighten( spin( @base, 5 ), 10% );
+@lighter20: lighten( spin( @base, 10 ), 20% );
+
+@darker10: darken( spin( @base, -5 ), 10% );
+@darker20: darken( spin( @base, -10 ), 20% );
+
+
+// Links
+// -------------------------
+@link-color: @base;
+@link-color-hover: @heading-link-color;
+@heading-link-color: @gray-dark;
+@heading-link-color-hover: @link-color;
+
+
+// Typography
+// -------------------------
+@font-heading: 'Droid Sans', sans-serif;
+@font-body: 'Droid Serif', serif;

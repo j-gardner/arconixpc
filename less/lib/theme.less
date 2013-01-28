@@ -1,0 +1,30 @@
+// Custom LESS file with theme-specific customizations
+
+#arconix {
+    .button() {
+        border: 1px solid @darken30;
+        .box-shadow-inset( 0, 1px, 0, 0, rgba( 255, 255, 255, 0.5 ) );
+        color: #fff;
+        cursor: pointer;
+        display: inline-block;
+        #gradient > .vertical( @gradient-light, @gradient-dark );
+        margin-bottom: 10px;
+        outline: none;
+        text-align: center;
+        text-decoration: none;
+        text-shadow: 0 -1px 1px rgba( 0, 0, 0, 0.4 );
+    }
+
+    .button-hover() {
+        background: @gradient-dark;
+        color: #fff;
+    }
+
+    .img() {
+        border: 4px solid @gray-light;
+    }
+
+    .img-hover() {
+        border-color: @gray;
+    }
+}
