@@ -60,11 +60,13 @@
 /* 04c - Header ----------- */
 
 #header {
-    border-bottom: 2px solid #1e1e1e;
-    min-height: 120px;
+    border-bottom: 2px solid @white;
+    height: 70px;
     overflow: hidden;
-    padding-bottom: 32px;
-    padding-bottom: 2rem;
+    padding-bottom: 10px;
+    padding-bottom: 0.625rem;
+    .box-shadow( 0, 10px, 20px, 0, #ddd);
+    text-transform: uppercase;
 }
 
 #title {
@@ -78,6 +80,7 @@
 }
 
 .header-full-width {
+    #title,
     #title a,
     #title-area {
         width: 100%;
@@ -85,28 +88,25 @@
 }
 
 .header-image {
-    #title,
-    #title a,
-    #title-area {
-       display: block;
-        float: left;
-        min-height: 120px;
-        overflow: hidden;
-        text-indent: -9999px;
-        width: 50%;
-    }
-
-    #description {
-        display: block;
-        overflow: hidden;
-    }
-
+    
     #title {
         margin: 0;
     }
-
-    #title-area {
+   
+    #title a {
         background: url(images/logo.png) no-repeat center left transparent;
+        display: block;
+        float: left;
+        height: 65px;
+        margin: 10px 0 0 0;
+        overflow: hidden;
+        padding: 0;
+        text-indent: -9999px;
+        width: 400px;
+    }
+
+    #description {
+        text-indent: -9999px;
     }
 }
 

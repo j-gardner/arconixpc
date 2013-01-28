@@ -9,10 +9,6 @@ video {
     max-width: 100%;
 }
 
-img {
-    height: auto;
-}
-
 .alignleft .avatar {
     margin-right: 24px;
     margin-right: 1.5rem;
@@ -35,17 +31,21 @@ img {
     margin: 0 1rem 1.5rem 0;
 }
 
+img {
+    height: auto;
+
+    &.alignnone {
+        display: inline;
+        margin-bottom: 12px;
+        margin-bottom: 0.75rem;
+    }
+}
+
 img.centered,
 .aligncenter {
     display: block;
     margin: 0 auto 24px;
     margin: 0 auto 1.5rem
-}
-
-img.alignnone {
-    display: inline;
-    margin-bottom: 12px;
-    margin-bottom: 0.75rem;
 }
 
 img.alignleft,

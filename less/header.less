@@ -1,12 +1,12 @@
 #header {
-    background-color: @body-bg;
-    border-bottom: 1px solid #f0f0f0;
+    background-color: @gray-dark;
+    border-bottom: 1px solid @gray-lighter;
     margin: 0 auto;
     min-height: 99px;
     position: relative;
     width: 100%;
     .box-shadow( 0, 10px, 20px, 0, #ddd);
-    
+
     .widget-area {
         float: right;
         padding: 25px 20px 0 0;
@@ -21,20 +21,20 @@
 
 /* Image Header - Partial Width
 ------------------------------------------------------------ */
-.header-image #title-area {
-    background: url(images/logo.png) no-repeat center left transparent;
-}
-
 .header-image {
     #title-area,
     #title,
     #title a {
         display: block;
         float: left;
-        height: 100px;
+        height: 60px;
         overflow: hidden;
         padding: 0;
         text-indent: -9999px;
         width: 400px;
+    }
+
+    #title a {
+        background: url(images/logo.png) no-repeat center left transparent;
     }
 }
