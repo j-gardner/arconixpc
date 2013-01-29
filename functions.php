@@ -88,7 +88,7 @@ function arconix_post_type_supports() {
 function arconix_load_google_fonts() {
     wp_enqueue_style(
     	'google-fonts',
-    	'http://fonts.googleapis.com/css?family=Droid+Sans:700|Droid+Serif',
+    	'http://fonts.googleapis.com/css?family=Droid+Sans|Droid+Serif',
     	false,
         CHILD_THEME_VERSION
     );
