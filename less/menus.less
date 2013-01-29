@@ -79,12 +79,16 @@
     a {
         color: @white;
         display: block;
-        padding: 12px 16px;
-        padding: 0.75rem 1rem;
+        margin-left: 12px;
+        margin-left: 0.75rem;
+        padding: 10px 4px;
+        padding: 0.625rem 0.25rem;
         position: relative;
+        .transition( 0s );
 
         &:hover {
             border-bottom: 3px solid @base;
+            .transition( 0s );
         }
     }
 
