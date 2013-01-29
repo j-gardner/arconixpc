@@ -19,8 +19,7 @@ function arconix_single_plugin_filter( $content ) {
     if( ! $slug ) return $content;
 
     // Pass the slug into the WP API to get the data we need
-    $details = ARCONIX_PLUGINS::get_wporg_custom_plugin_data( $slug );
-    $details = unserialize( $details );
+    $details = unserialize( ARCONIX_PLUGINS::get_wporg_custom_plugin_data( $slug ) );
 
     // Bail if $details isn't defined
     if( ! $details ) return $content;
