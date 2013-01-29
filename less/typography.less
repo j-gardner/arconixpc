@@ -28,35 +28,35 @@
 /* 02a - Font Color ----------- */
 
 a,
-body,
 h2 a:hover,
-input,
-.author,
-.date,
-.post-comments,
 #title a,
 #title a:hover {
     color: @base;
 }
 
+body,
+input,
+.author,
+.date,
+.post-comments,
 a:hover,
 h2 a,
-h2 a:visited,
 h4.widgettitle a {
     color: @gray-dark;
 }
 
+
 .post-info,
 .post-meta,
-#description {
-    color: @gray;
-}
-
+#description,
 blockquote::before,
 blockquote p,
 input,
 select,
-textarea {
+textarea,
+#footer,
+#footer a,
+#footer a:hover {
     color: @gray-light;
 }
 
@@ -89,6 +89,7 @@ h4,
 h5,
 h6,
 .entry-title a,
+.genesis-nav-menu,
 #title {
     font-family: @font-heading;
 }
