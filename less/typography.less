@@ -49,15 +49,23 @@ h4.widgettitle a {
 .post-info,
 .post-meta,
 #description,
-blockquote::before,
-blockquote p,
 input,
 select,
-textarea,
-#footer,
-#footer a,
-#footer a:hover {
+textarea {
     color: @gray-light;
+}
+
+#footer {
+    color: @gray-light;
+    
+    a {
+        color: @gray-light;
+        text-decoration: none;
+        
+        &:hover {
+            color: @white;
+        }
+    }
 }
 
 button,
@@ -108,11 +116,6 @@ h1,
     font-size: 2.25rem;
 }
 
-blockquote::before {
-    font-size: 32px;
-    font-size: 2rem;
-}
-
 h2 {
     font-size: 30px;
     font-size: 1.875rem;
@@ -158,8 +161,21 @@ textarea,
 
 /* 02d - Font Miscellaneous ----------- */
 
-blockquote p {
-    font-style: italic;
+blockquote {
+    font-size: 14px;
+    font-size: 0.875rem;
+    padding: 24px 64px;
+    padding: 1.5rem 4rem;
+    color: @gray;
+
+    p {
+        background-color: @gray-lighter;
+        border-left: 5px solid @base;
+        padding: 8px;
+        padding: 0.5rem;
+        padding-left: 20px;
+        padding-left: 1.25rem;
+    }
 }
 
 cite {
