@@ -144,7 +144,7 @@ function arconix_post_meta( $post_meta ) {
  * @return string
  */
 function arconix_footer_creds_text( $creds ) {
-    return 'Powered by [footer_wordpress_link] and <a href="http://studiopress.com/themes/genesis">Genesis</a> &bull; Hosted by <a href="http://arcnx.co/ix">IX Webhosting</a> &bull; [footer_loginout]';
+    return 'Powered by [footer_wordpress_link] and <a href="http://studiopress.com/themes/genesis">Genesis</a> | Hosted by <a href="http://arcnx.co/ix">IX Webhosting</a> | [footer_loginout]';
 }
 
 /**
