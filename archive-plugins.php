@@ -2,11 +2,11 @@
 /**
  * The Plugins post type archive template
  */
-
-remove_action( 'genesis_before_post_content', 'genesis_post_info' );
-
+add_filter( 'genesis_pre_get_option_site_layout', '__genesis_return_full_width_content' );
 add_filter( 'pre_get_posts', 'arconix_plugin_archive_change_order' );
 add_filter( 'genesis_post_meta', 'arconix_plugin_archive_post_meta' );
+
+remove_action( 'genesis_before_post_content', 'genesis_post_info' );
 
 
 /**
