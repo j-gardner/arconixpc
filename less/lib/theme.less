@@ -25,12 +25,28 @@
     }
 
     .img-hover() {
-        border-color: @gray;
+        border-color: @base;
     }
+
+    .shortcode-box( @c ) {
+        background-color: @c;
+        border-color: darken( saturate( spin( @c, -2 ), 2%), 10% );
+    }
+
+    .shortcode-img-box( @c ) {
+        background-color: @c;
+        border-color: darken( desaturate( @c, 2%), 10% );
+        color: darken( spin( @c, 8 ), 55% );
+    }
+
+    /**
+     * @see:  http://serennu.com/colour/hsltorgb.php -- convert hex to HSL
+     */
 }
 
 
-.post-type-archive-plugins {
+.post-type-archive-plugins,
+.post-type-archive-portfolio {
     .entry-title,
     .entry-title a {
         font-size: 28px;
