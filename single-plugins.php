@@ -24,12 +24,12 @@ function arconix_single_plugin_filter( $content ) {
     // Bail if $details isn't defined
     if( ! $details ) return $content;
 
-    $sections = $details->sections;
-    $description = $sections['description'];
+    $sections =     $details->sections;
+    $description =  $sections['description'];
     $installation = $sections['installation'];
-    $screenshots = $sections['screenshots'];
-    $changelog = $sections['changelog'];
-    $faq = $sections['faq'];
+    $screenshots =  $sections['screenshots'];
+    $changelog =    $sections['changelog'];
+    $faq =          $sections['faq'];
 
     // Our page content
     $content = '[tabs]';
@@ -37,7 +37,7 @@ function arconix_single_plugin_filter( $content ) {
     $content .= '[tab title="Installation"]' . $installation . '[/tab]';
     $content .= '[tab title="Screenshots"]' . $screenshots . '[/tab]';
     $content .= '[tab title="Changelog"]' . $changelog . '[/tab]';
-    $content.= '[tab title="FAQ"]' . $faq . '[/tab]';
+    $content .= '[tab title="FAQ"]' . $faq . '[/tab]';
     $content .= '[/tabs]';
 
     return $content;
