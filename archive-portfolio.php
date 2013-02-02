@@ -3,6 +3,7 @@
  * The Portfolio post type archive template
  */
 add_filter( 'genesis_pre_get_option_site_layout', '__genesis_return_full_width_content' );
+add_filter( 'genesis_link_post_title', '__return_false' );
 
 add_action( 'genesis_after_post_title', 'arconix_portfolio_archive_image' );
 
