@@ -48,18 +48,31 @@
     License:        GPL-2.0+
     License URI:    http://www.opensource.org/licenses/gpl-license.php
 */
+#arconix {
+  /**
+     * @see:  http://serennu.com/colour/hsltorgb.php -- convert hex to HSL
+     */
+
+}
+.post-type-archive-plugins .entry,
+.post-type-archive-portfolio .entry {
+  float: left;
+  margin-left: 4.166666666%;
+  width: 30.555555555%;
+}
+.post-type-archive-plugins .entry:nth-child(3n-2),
+.post-type-archive-portfolio .entry:nth-child(3n-2) {
+  margin-left: 0;
+}
 .post-type-archive-plugins .entry-title,
 .post-type-archive-plugins .entry-title a {
   font-size: 28px;
   font-size: 1.75rem;
 }
-.post-type-archive-plugins .entry {
-  float: left;
-  margin-left: 4.166666666%;
-  width: 30.555555555%;
-}
-.post-type-archive-plugins .entry:nth-child(3n-2) {
-  margin-left: 0;
+.post-type-archive-portfolio .entry-title,
+.post-type-archive-portfolio .entry-title a {
+  font-size: 18px;
+  font-size: 1.125rem;
 }
 /* Table of Contents
 ------------------------------------------------------------
