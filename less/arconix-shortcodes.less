@@ -2,8 +2,23 @@
 //------------------------------------------------------------
 @import "lib/variables.less";
 @import "lib/mixins.less";
-@import "lib/arconix.less";
 
+
+// Plugin-specific Mixins
+//------------------------------------------------------------
+
+// @see:  http://serennu.com/colour/hsltorgb.php -- convert hex to HSL
+
+.shortcode-box( @c ) {
+        background-color: @c;
+        border-color: darken( saturate( spin( @c, -2 ), 2%), 10% );
+}
+
+.shortcode-img-box( @c ) {
+    background-color: @c;
+    border-color: darken( desaturate( @c, 2%), 10% );
+    color: darken( spin( @c, 8 ), 55% );
+}
 
 
 /* Abbreviation Styling
@@ -35,37 +50,37 @@
 .arconix-box-blue {    
     background-color: #dbe7f8;
     border-color: #b7d2f2;
-    #arconix > .shortcode-box( #dbe7f8 );
+    .shortcode-box( #dbe7f8 );
 }
 
 .arconix-box-green {
     background-color: #f2f9e5;
     border-color: #ddedbc;
-    #arconix > .shortcode-box( #f2f9e5 );
+    .shortcode-box( #f2f9e5 );
 }
 
 .arconix-box-grey {
     background-color: #f2f2f2;
     border-color: #e5e5e5;
-    #arconix > .shortcode-box( #f2f2f2 );
+    .shortcode-box( #f2f2f2 );
 }
 
 .arconix-box-red {
     background-color: #ffdfdf;
     border-color: #feabab;
-    #arconix > .shortcode-box( #ffdfdf );
+    .shortcode-box( #ffdfdf );
 }
 
 .arconix-box-tan {
     background-color: #fef8e1;
     border-color: #feebab;
-    #arconix > .shortcode-box( #fef8e1 );
+    .shortcode-box( #fef8e1 );
 }
 
 .arconix-box-yellow {
     background-color: #ffffd5;
     border-color: #feebab;
-    #arconix > .shortcode-box( #ffffd5 );
+    .shortcode-box( #ffffd5 );
 }
 
 
@@ -77,12 +92,12 @@
 
 .arconix-box-alert {
     background: url(images/box-alert.png) no-repeat 16px;
-    #arconix > .shortcode-img-box( #ffdfdf );
+    .shortcode-img-box( #ffdfdf );
 }
 
 .arconix-box-comment {
     background: url(images/box-comment.png) no-repeat 16px;
-    #arconix > .shortcode-img-box( #fef8e1 );
+    .shortcode-img-box( #fef8e1 );
 }
 
 .arconix-box-download {

@@ -18,26 +18,12 @@
         color: #fff;
     }
 
-    .img() {
-        border: 4px solid @gray-light;
+    .img( @b: @gray-lighter ) {
+        border: 4px solid @b;
     }
 
-    .img-hover() {
-        border-color: @base;
+    .img-hover( @h: @base ) {
+        border-color: @h;
+        .transition;
     }
-
-    .shortcode-box( @c ) {
-        background-color: @c;
-        border-color: darken( saturate( spin( @c, -2 ), 2%), 10% );
-    }
-
-    .shortcode-img-box( @c ) {
-        background-color: @c;
-        border-color: darken( desaturate( @c, 2%), 10% );
-        color: darken( spin( @c, 8 ), 55% );
-    }
-
-    /**
-     * @see:  http://serennu.com/colour/hsltorgb.php -- convert hex to HSL
-     */
 }
