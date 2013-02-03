@@ -15,6 +15,7 @@
 		- Post Info & Meta
 		- Column Classes
 		- Miscellaneous
+	0 Archive
 	05 Menus
 		- Primary Navigation Extras
 	06 Headings
@@ -48,32 +49,6 @@
     License:        GPL-2.0+
     License URI:    http://www.opensource.org/licenses/gpl-license.php
 */
-#arconix {
-  /**
-     * @see:  http://serennu.com/colour/hsltorgb.php -- convert hex to HSL
-     */
-
-}
-.post-type-archive-plugins .entry,
-.post-type-archive-portfolio .entry {
-  float: left;
-  margin-left: 4.166666666%;
-  width: 30.555555555%;
-}
-.post-type-archive-plugins .entry:nth-child(3n-2),
-.post-type-archive-portfolio .entry:nth-child(3n-2) {
-  margin-left: 0;
-}
-.post-type-archive-plugins .entry-title,
-.post-type-archive-plugins .entry-title a {
-  font-size: 28px;
-  font-size: 1.75rem;
-}
-.post-type-archive-portfolio .entry-title,
-.post-type-archive-portfolio .entry-title a {
-  font-size: 18px;
-  font-size: 1.125rem;
-}
 /* Table of Contents
 ------------------------------------------------------------
 
@@ -91,6 +66,7 @@
 		- Post Info & Meta
 		- Column Classes
 		- Miscellaneous
+	0 Archive
 	05 Menus
 		- Primary Navigation Extras
 	06 Headings
@@ -598,6 +574,36 @@ p.pages,
   overflow: hidden;
   padding: 32px;
   padding: 2rem;
+}
+.post-type-archive-plugins .entry,
+.post-type-archive-portfolio .entry {
+  float: left;
+  margin-left: 4.166666666%;
+  width: 30.555555555%;
+}
+.post-type-archive-plugins .entry:nth-child(3n-2),
+.post-type-archive-portfolio .entry:nth-child(3n-2) {
+  margin-left: 0;
+}
+.post-type-archive-plugins .entry-title,
+.post-type-archive-plugins .entry-title a {
+  font-size: 28px;
+  font-size: 1.75rem;
+}
+.post-type-archive-portfolio .entry-title,
+.post-type-archive-portfolio .entry-title a {
+  font-size: 18px;
+  font-size: 1.125rem;
+}
+.post-type-archive-portfolio .arconix-portfolio-featured-image img {
+  border: 4px solid #eeeeee;
+}
+.post-type-archive-portfolio .arconix-portfolio-featured-image img:hover {
+  border-color: #759b3b;
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
 }
 /*
 05 Menus
