@@ -8,8 +8,9 @@ define( 'CHILD_THEME_URL', 'http://arconixpc.com' );
 define( 'CHILD_THEME_VERSION', '3.0' );
 
 add_action( 'init', 'arconix_post_type_supports' );
-add_action( 'wp_enqueue_scripts', 'arconix_load_google_fonts' );
+add_action( 'wp_enqueue_scripts', 'arconix_load_scripts' );
 add_action( 'genesis_meta', 'arconix_add_viewport_meta_tag' );
+
 remove_action( 'genesis_before_loop', 'genesis_do_breadcrumbs' );
 
 add_filter( 'genesis_post_info', 'arconix_post_info' );
@@ -85,17 +86,20 @@ function arconix_post_type_supports() {
 }
 
 /**
- * Load the necessary Google Fonts
+ * Load Google fonts and unregister superfish
  *
  * @since 3.0
  */
-function arconix_load_google_fonts() {
+function arconix_load_scripts() {
     wp_enqueue_style(
         'google-fonts',
         'http://fonts.googleapis.com/css?family=Droid+Sans|Droid+Serif',
         false,
         CHILD_THEME_VERSION
     );
+
+    wp_deregister_script( 'superfish' );
+    wp_deregister_script( 'superfish-args' );
 }
 
 /**
