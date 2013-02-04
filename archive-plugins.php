@@ -25,8 +25,9 @@ function arconix_plugin_archive_post_meta( $post_meta ){
 
     if( ! $details ) return;
 
-    $post_meta = 'Version: ' . $details->version . ' | Last Updated: ' . date( get_option( 'date_format' ), strtotime( $details->last_updated ) );
-    $post_meta .= ' <span class="arconix-plugins-ago">(' . ARCONIX_PLUGINS::ago( strtotime( $details->last_updated ) ) . ')</span> | Downloads: ' . $details->downloaded;
+    $post_meta = 'Version: ' . $details->version . ' | Downloads: ' . $details->downloaded;
+    /*$post_meta = 'Version: ' . $details->version . ' | Last Updated: ' . date( get_option( 'date_format' ), strtotime( $details->last_updated ) );
+    $post_meta .= ' <span class="arconix-plugins-ago">(' . ARCONIX_PLUGINS::ago( strtotime( $details->last_updated ) ) . ')</span> | Downloads: ' . $details->downloaded;*/
 
     return $post_meta;
 }
