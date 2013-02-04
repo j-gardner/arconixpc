@@ -1,4 +1,4 @@
-// Variables, Mixins & Theme Specific
+// Variables and Generic Mixins
 //------------------------------------------------------------
 @import "lib/variables.less";
 @import "lib/mixins.less";
@@ -10,8 +10,8 @@
 // @see:  http://serennu.com/colour/hsltorgb.php -- convert hex to HSL
 
 .shortcode-box( @c ) {
-        background-color: @c;
-        border-color: darken( saturate( spin( @c, -2 ), 2%), 10% );
+    background-color: @c;
+    border-color: darken( saturate( spin( @c, -2 ), 2%), 10% );
 }
 
 .shortcode-img-box( @c ) {
@@ -19,6 +19,31 @@
     border-color: darken( desaturate( @c, 2%), 10% );
     color: darken( spin( @c, 8 ), 55% );
 }
+
+.shortcode-button( @c ) {
+    background: @c;
+    border: 1px solid darken( c, 10%);
+    color: #fff;    
+    cursor: pointer;
+    .box-shadow-inset( 0, 1px, 0, 0, rgba(255, 255, 255, 0.5) );
+    display: inline-block;
+    #gradient > .vertical( lighten( @c, 15% ), @c );
+    margin-bottom: 10px;
+    outline: none;
+    .radius( 3px );
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.4);
+    vertical-align: middle;
+
+    &:hover {
+        background: darken( @c, 5% );
+        color: #fff;
+        text-decoration: none;
+    }
+
+}
+
 
 
 /* Abbreviation Styling
@@ -33,7 +58,8 @@
 .arconix-box {
     border: 1px solid;
     clear: both;
-    margin: 15px 0;
+    margin: 16px 0;
+    margin: 1rem 0;
     // Couldn't use the box-shadow-inset mixin as it doesn't support all these settings
     -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1), 0 1px 0 #FFFFFF inset, 0 -1px 0 #FFFFFF inset;
        -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1), 0 1px 0 #FFFFFF inset, 0 -1px 0 #FFFFFF inset;
@@ -88,7 +114,10 @@
 .arconix-box-comment,
 .arconix-box-download,
 .arconix-box-info,
-.arconix-box-tip { padding: 16px 20px 16px 56px; }
+.arconix-box-tip { 
+    padding: 16px 20px 16px 56px; 
+    padding: 1rem 1.25rem 1rem 3.5rem;
+}
 
 .arconix-box-alert {
     background: url(images/box-alert.png) no-repeat 16px;
@@ -117,24 +146,6 @@
 
 /* Button Styling
 ------------------------------------------------------------ */
-.arconix-button {
-    color: #fff;
-    cursor: pointer;
-    .box-shadow-inset( 0, 1px, 0, 0, rgba(255, 255, 255, 0.5) );
-    display: inline-block;
-    margin-bottom: 10px;
-    outline: none;
-    text-align: center;
-    text-decoration: none;
-    text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.4);
-
-    &:hover {
-        color: #fff;
-        text-decoration: none;
-    }
-}
-
-
 .arconix-button-large {
     font: 16px Arial, Helvetica, sans-serif;
     padding: 8px 32px 9px;
@@ -157,53 +168,26 @@
 /* Blue
 ------------------------------------------------------------ */
 .arconix-button-blue {
-    border: solid 1px #0076a3;
-    background: #0095cd;
-    background: -webkit-gradient(linear, left top, left bottom, from(#00adee), to(#0078a5));
-    background: -moz-linear-gradient(top,  #00adee,  #0078a5);
-    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#00adee', endColorstr='#0078a5');
-}
-.arconix-button-blue:hover {
-    background: #007ead !important;
-    background: -webkit-gradient(linear, left top, left bottom, from(#0095cc), to(#00678e));
-    background: -moz-linear-gradient(top,  #0095cc,  #00678e);
-    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#0095cc', endColorstr='#00678e');
-}
-.arconix-button-blue:active {
-    color: #80bed6 !important;
-    background: -webkit-gradient(linear, left top, left bottom, from(#0078a5), to(#00adee));
-    background: -moz-linear-gradient(top,  #0078a5,  #00adee);
-    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#0078a5', endColorstr='#00adee');
+    .shortcode-button( @blue-dark );
 }
 
 /* Green
 ------------------------------------------------------------ */
 .arconix-button-green {
-    border: solid 1px #538312;
-    background: #64991e;
-    background: -webkit-gradient(linear, left top, left bottom, from(#7db72f), to(#4e7d0e));
-    background: -moz-linear-gradient(top,  #7db72f,  #4e7d0e);
-    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#7db72f', endColorstr='#4e7d0e');
-}
-.arconix-button-green:hover {
-    background: #538018 !important;
-    background: -webkit-gradient(linear, left top, left bottom, from(#6b9d28), to(#436b0c));
-    background: -moz-linear-gradient(top,  #6b9d28,  #436b0c);
-    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#6b9d28', endColorstr='#436b0c');
-}
-.arconix-button-green:active {
-    color: #a9c08c !important;
-    background: -webkit-gradient(linear, left top, left bottom, from(#4e7d0e), to(#7db72f));
-    background: -moz-linear-gradient(top,  #4e7d0e,  #7db72f);
-    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#4e7d0e', endColorstr='#7db72f');
+    .shortcode-button( @base );
 }
 
+/* Red
+------------------------------------------------------------ */
+.arconix-button-red {
+    .shortcode-button( @red );
+}
 
 
 /* Highlight
 ------------------------------------------------------------ */
 .arconix-highlight { padding: 3px 4px; }
-.arconix-highlight-yellow { background-color: #ffff33; }
+.arconix-highlight-yellow { background-color: @yellow; }
 
 
 /* Unordered list Styling
@@ -236,6 +220,7 @@
 ------------------------------------------------------------ */
 .arconix-tabs-horizontal {
     clear: both;
+    margin-top: 3px;
     margin-bottom: 25px;
 }
 
@@ -262,12 +247,6 @@
 /* Indivdual Tab link Text */
 .arconix-tabs-horizontal ul.arconix-tabs a {
     background-color: #eee;
-    -webkit-border-top-left-radius: 5px;
-       -moz-border-radius-topleft: 5px;
-            border-top-left-radius: 5px;
-    -webkit-border-top-right-radius: 5px;
-       -moz-border-radius-topright: 5px;
-            border-top-right-radius: 5px;
     border: 1px solid #ccc;
     color: #333;
     display: block;
@@ -311,63 +290,3 @@
 }
 
 .arconix-tabs-horizontal .arconix-pane { padding: 20px 15px 0; }
-
-/* Toggle Styling
------------------------------------------------------------- */
-.arconix-toggle-wrap {
-    -webkit-border-radius: 5px;
-       -moz-border-radius: 5px;
-            border-radius: 5px;
-    background:	none repeat scroll 0 0 #fbfbfb;
-    clear: both;
-    border: 1px solid #ddd;
-    margin: 10px inherit;
-    padding: 5px 10px;
-}
-.arconix-toggle-title {
-    background: url(images/toggle-open.png) no-repeat left transparent;
-    cursor: pointer;
-    font-size: 16px;
-    padding: 0 0 0 30px;
-    position: relative;
-}
-
-.arconix-toggle-title.active { background: url(images/toggle-close.png) no-repeat left transparent; }
-
-.arconix-toggle-content {
-    margin-left: 10px;
-    padding: 15px 20px;
-}
-
-/* Column Classes
------------------------------------------------------------- */
-.arconix-column-four-fifths,
-.arconix-column-one-fifth,
-.arconix-column-one-fourth,
-.arconix-column-one-half,
-.arconix-column-one-third,
-.arconix-column-three-fifths,
-.arconix-column-three-fourths,
-.arconix-column-two-fifths,
-.arconix-column-two-fourths,
-.arconix-column-two-thirds {
-    float: left;
-    margin: 0 0 20px;
-    padding-right: 3%;
-}
-
-.arconix-column-one-half,
-.arconix-column-two-fourths { width: 48%; }
-.arconix-column-one-third { width: 31%; }
-.arconix-column-two-thirds { width: 65%; }
-.arconix-column-one-fourth { width: 22.5%; }
-.arconix-column-three-fourths { width: 73.5%; }
-.arconix-column-one-fifth { width: 17.4%; }
-.arconix-column-two-fifths { width: 37.8%; }
-.arconix-column-three-fifths { width: 58.2%; }
-.arconix-column-four-fifths { width: 78.6%; }
-
-.arconix-column-last {
-    clear: right;
-    padding-right: 0;
-}
