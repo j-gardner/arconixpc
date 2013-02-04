@@ -596,7 +596,7 @@ p.pages,
   font-size: 1.125rem;
 }
 .post-type-archive-portfolio .arconix-portfolio-featured-image img {
-  border: 4px solid #eeeeee;
+  border: 5px solid #dddddd;
 }
 .post-type-archive-portfolio .arconix-portfolio-featured-image img:hover {
   border-color: #759b3b;
