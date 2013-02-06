@@ -1,7 +1,5 @@
 /* Abbreviation Styling
 ------------------------------------------------------------ */
-/* Abbreviation Styling
------------------------------------------------------------- */
 .arconix-abbr {
   border-bottom: 1px dotted #ccc;
   cursor: help;
@@ -11,7 +9,8 @@
 .arconix-box {
   border: 1px solid;
   clear: both;
-  margin: 15px 0;
+  margin: 16px 0;
+  margin: 1rem 0;
   -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1), 0 1px 0 #ffffff inset, 0 -1px 0 #ffffff inset;
   -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1), 0 1px 0 #ffffff inset, 0 -1px 0 #ffffff inset;
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.1), 0 1px 0 #ffffff inset, 0 -1px 0 #ffffff inset;
@@ -25,37 +24,31 @@
   padding: 15px;
 }
 .arconix-box-blue {
-  background-color: #dbe7f8;
   border-color: #b7d2f2;
   background-color: #dbe7f8;
   border-color: #afcdf1;
 }
 .arconix-box-green {
-  background-color: #f2f9e5;
   border-color: #ddedbc;
   background-color: #f2f9e5;
   border-color: #dff0bb;
 }
 .arconix-box-grey {
-  background-color: #f2f2f2;
   border-color: #e5e5e5;
   background-color: #f2f2f2;
   border-color: #d9d8d8;
 }
 .arconix-box-red {
-  background-color: #ffdfdf;
   border-color: #feabab;
   background-color: #ffdfdf;
   border-color: #ffacaf;
 }
 .arconix-box-tan {
-  background-color: #fef8e1;
   border-color: #feebab;
   background-color: #fef8e1;
   border-color: #fdeaaf;
 }
 .arconix-box-yellow {
-  background-color: #ffffd5;
   border-color: #feebab;
   background-color: #ffffd5;
   border-color: #fffca2;
@@ -66,6 +59,7 @@
 .arconix-box-info,
 .arconix-box-tip {
   padding: 16px 20px 16px 56px;
+  padding: 1rem 1.25rem 1rem 3.5rem;
 }
 .arconix-box-alert {
   background: url(images/box-alert.png) no-repeat 16px;
@@ -99,23 +93,6 @@
 }
 /* Button Styling
 ------------------------------------------------------------ */
-.arconix-button {
-  color: #fff;
-  cursor: pointer;
-  -webkit-box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.5);
-  -moz-box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.5);
-  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.5);
-  display: inline-block;
-  margin-bottom: 10px;
-  outline: none;
-  text-align: center;
-  text-decoration: none;
-  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.4);
-}
-.arconix-button:hover {
-  color: #fff;
-  text-decoration: none;
-}
 .arconix-button-large {
   font: 16px Arial, Helvetica, sans-serif;
   padding: 8px 32px 9px;
@@ -133,44 +110,110 @@
 /* Blue
 ------------------------------------------------------------ */
 .arconix-button-blue {
-  border: solid 1px #0076a3;
-  background: #0095cd;
-  background: -webkit-gradient(linear, left top, left bottom, from(#00adee), to(#0078a5));
-  background: -moz-linear-gradient(top, #00adee, #0078a5);
-  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#00adee', endColorstr='#0078a5');
+  background: #0064cd;
+  border: 1px solid #004b9a;
+  color: #fff;
+  cursor: pointer;
+  -webkit-box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.5);
+  -moz-box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.5);
+  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.5);
+  display: inline-block;
+  background-color: #107beb;
+  background-image: -webkit-linear-gradient(top, #1b8aff, #0064cd);
+  background-image: -moz-linear-gradient(top, #1b8aff, #0064cd);
+  background-image: -ms-linear-gradient(top, #1b8aff, #0064cd);
+  background-image: -o-linear-gradient(top, #1b8aff, #0064cd);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#1b8aff), to(#0064cd));
+  background-image: linear-gradient(top, #1b8aff, #0064cd);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(start-colorstr='#1b8aff', end-colorstr='#0064cd', GradientType=0);
+  margin-bottom: 10px;
+  outline: none;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.4);
+  vertical-align: middle;
 }
 .arconix-button-blue:hover {
-  background: #007ead !important;
-  background: -webkit-gradient(linear, left top, left bottom, from(#0095cc), to(#00678e));
-  background: -moz-linear-gradient(top, #0095cc, #00678e);
-  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#0095cc', endColorstr='#00678e');
-}
-.arconix-button-blue:active {
-  color: #80bed6 !important;
-  background: -webkit-gradient(linear, left top, left bottom, from(#0078a5), to(#00adee));
-  background: -moz-linear-gradient(top, #0078a5, #00adee);
-  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#0078a5', endColorstr='#00adee');
+  background: #0058b4;
+  color: #fff;
+  text-decoration: none;
 }
 /* Green
 ------------------------------------------------------------ */
 .arconix-button-green {
-  border: solid 1px #538312;
-  background: #64991e;
-  background: -webkit-gradient(linear, left top, left bottom, from(#7db72f), to(#4e7d0e));
-  background: -moz-linear-gradient(top, #7db72f, #4e7d0e);
-  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#7db72f', endColorstr='#4e7d0e');
+  background: #759b3b;
+  border: 1px solid #59762d;
+  color: #fff;
+  cursor: pointer;
+  -webkit-box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.5);
+  -moz-box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.5);
+  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.5);
+  display: inline-block;
+  background-color: #8cb351;
+  background-image: -webkit-linear-gradient(top, #9cc260, #759b3b);
+  background-image: -moz-linear-gradient(top, #9cc260, #759b3b);
+  background-image: -ms-linear-gradient(top, #9cc260, #759b3b);
+  background-image: -o-linear-gradient(top, #9cc260, #759b3b);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#9cc260), to(#759b3b));
+  background-image: linear-gradient(top, #9cc260, #759b3b);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(start-colorstr='#9cc260', end-colorstr='#759b3b', GradientType=0);
+  margin-bottom: 10px;
+  outline: none;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.4);
+  vertical-align: middle;
 }
 .arconix-button-green:hover {
-  background: #538018 !important;
-  background: -webkit-gradient(linear, left top, left bottom, from(#6b9d28), to(#436b0c));
-  background: -moz-linear-gradient(top, #6b9d28, #436b0c);
-  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#6b9d28', endColorstr='#436b0c');
+  background: #678934;
+  color: #fff;
+  text-decoration: none;
 }
-.arconix-button-green:active {
-  color: #a9c08c !important;
-  background: -webkit-gradient(linear, left top, left bottom, from(#4e7d0e), to(#7db72f));
-  background: -moz-linear-gradient(top, #4e7d0e, #7db72f);
-  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#4e7d0e', endColorstr='#7db72f');
+/* Red
+------------------------------------------------------------ */
+.arconix-button-red {
+  background: #9d261d;
+  border: 1px solid #721c15;
+  color: #fff;
+  cursor: pointer;
+  -webkit-box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.5);
+  -moz-box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.5);
+  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.5);
+  display: inline-block;
+  background-color: #c13227;
+  background-image: -webkit-linear-gradient(top, #d83a2e, #9d261d);
+  background-image: -moz-linear-gradient(top, #d83a2e, #9d261d);
+  background-image: -ms-linear-gradient(top, #d83a2e, #9d261d);
+  background-image: -o-linear-gradient(top, #d83a2e, #9d261d);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#d83a2e), to(#9d261d));
+  background-image: linear-gradient(top, #d83a2e, #9d261d);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(start-colorstr='#d83a2e', end-colorstr='#9d261d', GradientType=0);
+  margin-bottom: 10px;
+  outline: none;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.4);
+  vertical-align: middle;
+}
+.arconix-button-red:hover {
+  background: #872119;
+  color: #fff;
+  text-decoration: none;
 }
 /* Highlight
 ------------------------------------------------------------ */
@@ -178,7 +221,7 @@
   padding: 3px 4px;
 }
 .arconix-highlight-yellow {
-  background-color: #ffff33;
+  background-color: #ffc40d;
 }
 /* Unordered list Styling
 ------------------------------------------------------------ */
@@ -223,156 +266,63 @@
 .arconix-list-star ul li {
   background: url(images/star.png) no-repeat 0 6px;
 }
-/* Tabs Styling
------------------------------------------------------------- */
-/* Tabs - Horizontal
------------------------------------------------------------- */
 .arconix-tabs-horizontal {
   clear: both;
-  margin-bottom: 25px;
+  margin-top: 3px;
 }
-/* Tabs  */
 .arconix-tabs-horizontal ul.arconix-tabs {
   margin: 0 !important;
   padding: 0;
-  border-bottom: 1px solid #ddd;
-  height: 30px;
 }
-/* Individual Tab */
-.arconix-tabs-horizontal ul.arconix-tabs li {
-  list-style: none !important;
+.arconix-tabs-horizontal ul.arconix-tabs li.arconix-tab {
+  list-style: none;
   float: left;
-  text-indent: 0;
-  padding: 0;
-  margin: 0;
-  margin-right: 5px;
-  position: relative;
-  top: -1px;
+  margin: 0 6px 16px 0;
+  margin: 0 0.375rem 1rem 0;
 }
-/* Indivdual Tab link Text */
-.arconix-tabs-horizontal ul.arconix-tabs a {
-  background-color: #eee;
-  -webkit-border-top-left-radius: 5px;
-  -moz-border-radius-topleft: 5px;
-  border-top-left-radius: 5px;
-  -webkit-border-top-right-radius: 5px;
-  -moz-border-radius-topright: 5px;
-  border-top-right-radius: 5px;
-  border: 1px solid #ccc;
-  color: #333;
-  display: block;
-  font-size: 15px;
-  height: 30px;
-  line-height: 30px;
-  margin: 0;
-  padding: 0 10px;
-  position: relative;
-  text-align: center;
+.arconix-tabs-horizontal ul.arconix-tabs li.arconix-tab a {
+  color: #333333;
+  font-size: 14px;
+  font-size: 0.875rem;
+  padding: 10px;
+  padding: 0.625rem;
   text-decoration: none;
-  min-width: 80px;
-  width: auto;
+  text-transform: uppercase;
 }
-.arconix-tabs-horizontal ul.arconix-tabs a:active {
+.arconix-tabs-horizontal ul.arconix-tabs li.arconix-tab a:active {
   outline: none;
 }
-/* Individual Tab :Hover state */
-.arconix-tabs-horizontal ul.arconix-tabs a:hover {
-  background-color: #e9e9e9;
+.arconix-tabs-horizontal ul.arconix-tabs li.arconix-tab a.current {
+  cursor: default;
 }
-/* Active Tab */
-.arconix-tabs-horizontal ul.arconix-tabs a.current,
-.arconix-tabs-horizontal ul.arconix-tabs a.current:hover,
-.arconix-tabs-horizontal ul.arconix-tabs li.current a {
-  background-color: #fbfbfb;
-  border-bottom: 1px solid #fbfbfb;
-  cursor: default !important;
-  color: #333 !important;
+.arconix-tabs-horizontal ul.arconix-tabs li.arconix-tab a:hover,
+.arconix-tabs-horizontal ul.arconix-tabs li.arconix-tab a.current {
+  border-bottom: 3px solid #759b3b;
 }
-/* Panes */
 .arconix-tabs-horizontal .arconix-panes {
-  background-color: #fbfbfb;
-  border: 1px solid #ccc;
-  border-top: none;
   clear: both;
   overflow: hidden;
   padding-bottom: 15px;
-  position: relative;
-  top: -1px;
 }
 .arconix-tabs-horizontal .arconix-pane {
   padding: 20px 15px 0;
 }
-/* Toggle Styling
------------------------------------------------------------- */
-.arconix-toggle-wrap {
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-  background: none repeat scroll 0 0 #fbfbfb;
-  clear: both;
-  border: 1px solid #ddd;
-  margin: 10px inherit;
-  padding: 5px 10px;
+.arconix-tabs-horizontal .arconix-pane h4 {
+  font-size: 18px;
+  font-size: 1.125rem;
 }
-.arconix-toggle-title {
-  background: url(images/toggle-open.png) no-repeat left transparent;
-  cursor: pointer;
+.arconix-tabs-horizontal .pane-changelog h4 {
   font-size: 16px;
-  padding: 0 0 0 30px;
-  position: relative;
+  font-size: 1rem;
 }
-.arconix-toggle-title.active {
-  background: url(images/toggle-close.png) no-repeat left transparent;
+.arconix-tabs-horizontal .pane-screenshots img.screenshot {
+  max-width: 50%;
 }
-.arconix-toggle-content {
-  margin-left: 10px;
-  padding: 15px 20px;
+.arconix-tabs-horizontal .pane-screenshots p {
+  color: #777;
+  text-indent: 10px;
 }
-/* Column Classes
------------------------------------------------------------- */
-.arconix-column-four-fifths,
-.arconix-column-one-fifth,
-.arconix-column-one-fourth,
-.arconix-column-one-half,
-.arconix-column-one-third,
-.arconix-column-three-fifths,
-.arconix-column-three-fourths,
-.arconix-column-two-fifths,
-.arconix-column-two-fourths,
-.arconix-column-two-thirds {
-  float: left;
-  margin: 0 0 20px;
-  padding-right: 3%;
-}
-.arconix-column-one-half,
-.arconix-column-two-fourths {
-  width: 48%;
-}
-.arconix-column-one-third {
-  width: 31%;
-}
-.arconix-column-two-thirds {
-  width: 65%;
-}
-.arconix-column-one-fourth {
-  width: 22.5%;
-}
-.arconix-column-three-fourths {
-  width: 73.5%;
-}
-.arconix-column-one-fifth {
-  width: 17.4%;
-}
-.arconix-column-two-fifths {
-  width: 37.8%;
-}
-.arconix-column-three-fifths {
-  width: 58.2%;
-}
-.arconix-column-four-fifths {
-  width: 78.6%;
-}
-.arconix-column-last {
-  clear: right;
-  padding-right: 0;
+.arconix-tabs-horizontal .pane-screenshots ol li {
+  list-style-type: none;
+  margin-left: 0;
 }

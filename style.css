@@ -1,39 +1,3 @@
-/* Table of Contents
-------------------------------------------------------------
-
-	01 Defaults
-	02 Typography
-                - Font Color
-                - Font Family
-                - Font Size
-                - Font Miscellaneous
-	04 Layout
-		- Structure
-		- 1152px CSS Grid
-		- Header
-		- Main Content
-		- Post Info & Meta
-		- Column Classes
-		- Miscellaneous
-	0 Archive
-	05 Menus
-		- Primary Navigation Extras
-	06 Headings
-	07 Lists
-	08 Post Navigation
-	09 Comments
-	10 Sidebars
-	11 Footer
-		- Footer Widgets
-	12 Forms & Buttons
-		- Gravity Forms
-	13 Images & Captions
-	14 Media Queries
-		- max-width: 1024px
-		- max-width: 768px
-		- max-width: 480px
-
-*/
 /*
     Theme Name:     Arconix Computers
     Theme URI:      http://arconixpc.com
@@ -380,6 +344,13 @@ h2 a:visited,
 .widgettitle a,
 #title a {
   text-decoration: none;
+}
+code {
+  background-color: #ffffff;
+  border: 1px solid #eeeeee;
+  color: #759b3b;
+  padding: 1px 4px;
+  padding: 0.0625rem 0.25rem;
 }
 /*
 04 Layout
@@ -978,6 +949,7 @@ video {
   margin: 0 1rem 1.5rem 0;
 }
 img {
+  border: 5px solid #ddd;
   height: auto;
 }
 img.alignnone {
