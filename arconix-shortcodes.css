@@ -211,6 +211,42 @@
   color: #fff;
   text-decoration: none;
 }
+/* Silver
+------------------------------------- */
+.arconix-button-silver {
+  background: #999999;
+  border: 1px solid #808080;
+  color: #fff;
+  cursor: pointer;
+  -webkit-box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.5);
+  -moz-box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.5);
+  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.5);
+  display: inline-block;
+  background-color: #b0b0b0;
+  background-image: -webkit-linear-gradient(top, #bfbfbf, #999999);
+  background-image: -moz-linear-gradient(top, #bfbfbf, #999999);
+  background-image: -ms-linear-gradient(top, #bfbfbf, #999999);
+  background-image: -o-linear-gradient(top, #bfbfbf, #999999);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#bfbfbf), to(#999999));
+  background-image: linear-gradient(top, #bfbfbf, #999999);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(start-colorstr='#bfbfbf', end-colorstr='#999999', GradientType=0);
+  margin-bottom: 10px;
+  outline: none;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.4);
+  vertical-align: middle;
+}
+.arconix-button-silver:hover {
+  background: #8c8c8c;
+  color: #fff;
+  text-decoration: none;
+}
 /* Highlight
 ------------------------------------------------------------ */
 .arconix-highlight {
