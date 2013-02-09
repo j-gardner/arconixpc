@@ -108,11 +108,10 @@
 .arconix-button-blue {
   background: #0064cd;
   border: 1px solid #004b9a;
-  color: #fff;
-  cursor: pointer;
   -webkit-box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.5);
   -moz-box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.5);
   box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.5);
+  cursor: pointer;
   display: inline-block;
   background-color: #107beb;
   background-image: -webkit-linear-gradient(top, #1b8aff, #0064cd);
@@ -131,24 +130,35 @@
   border-radius: 3px;
   text-align: center;
   text-decoration: none;
-  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.4);
   vertical-align: middle;
+  color: #ffffff;
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.4);
 }
 .arconix-button-blue:hover {
-  background: #0058b4;
-  color: #fff;
+  background: #0062c8;
+  background-color: #0b73e1;
+  background-image: -webkit-linear-gradient(top, #0064cd, #1b8aff);
+  background-image: -moz-linear-gradient(top, #0064cd, #1b8aff);
+  background-image: -ms-linear-gradient(top, #0064cd, #1b8aff);
+  background-image: -o-linear-gradient(top, #0064cd, #1b8aff);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0064cd), to(#1b8aff));
+  background-image: linear-gradient(top, #0064cd, #1b8aff);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(start-colorstr='#0064cd', end-colorstr='#1b8aff', GradientType=0);
   text-decoration: none;
+}
+.arconix-button-blue:hover {
+  color: #ffffff;
 }
 /* Green
 ------------------------------------- */
 .arconix-button-green {
   background: #759b3b;
   border: 1px solid #59762d;
-  color: #fff;
-  cursor: pointer;
   -webkit-box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.5);
   -moz-box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.5);
   box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.5);
+  cursor: pointer;
   display: inline-block;
   background-color: #8cb351;
   background-image: -webkit-linear-gradient(top, #9cc260, #759b3b);
@@ -167,24 +177,35 @@
   border-radius: 3px;
   text-align: center;
   text-decoration: none;
-  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.4);
   vertical-align: middle;
+  color: #ffffff;
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.4);
 }
 .arconix-button-green:hover {
-  background: #678934;
-  color: #fff;
+  background: #72973a;
+  background-color: #84ab4a;
+  background-image: -webkit-linear-gradient(top, #759b3b, #9cc260);
+  background-image: -moz-linear-gradient(top, #759b3b, #9cc260);
+  background-image: -ms-linear-gradient(top, #759b3b, #9cc260);
+  background-image: -o-linear-gradient(top, #759b3b, #9cc260);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#759b3b), to(#9cc260));
+  background-image: linear-gradient(top, #759b3b, #9cc260);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(start-colorstr='#759b3b', end-colorstr='#9cc260', GradientType=0);
   text-decoration: none;
+}
+.arconix-button-green:hover {
+  color: #ffffff;
 }
 /* Red
 ------------------------------------- */
 .arconix-button-red {
   background: #9d261d;
   border: 1px solid #721c15;
-  color: #fff;
-  cursor: pointer;
   -webkit-box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.5);
   -moz-box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.5);
   box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.5);
+  cursor: pointer;
   display: inline-block;
   background-color: #c13227;
   background-image: -webkit-linear-gradient(top, #d83a2e, #9d261d);
@@ -203,34 +224,45 @@
   border-radius: 3px;
   text-align: center;
   text-decoration: none;
-  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.4);
   vertical-align: middle;
+  color: #ffffff;
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.4);
 }
 .arconix-button-red:hover {
-  background: #872119;
-  color: #fff;
+  background: #99251c;
+  background-color: #b52e24;
+  background-image: -webkit-linear-gradient(top, #9d261d, #d83a2e);
+  background-image: -moz-linear-gradient(top, #9d261d, #d83a2e);
+  background-image: -ms-linear-gradient(top, #9d261d, #d83a2e);
+  background-image: -o-linear-gradient(top, #9d261d, #d83a2e);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#9d261d), to(#d83a2e));
+  background-image: linear-gradient(top, #9d261d, #d83a2e);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(start-colorstr='#9d261d', end-colorstr='#d83a2e', GradientType=0);
   text-decoration: none;
+}
+.arconix-button-red:hover {
+  color: #ffffff;
 }
 /* Silver
 ------------------------------------- */
 .arconix-button-silver {
-  background: #999999;
-  border: 1px solid #808080;
-  color: #fff;
-  cursor: pointer;
+  background: #cccccc;
+  border: 1px solid #b3b3b3;
   -webkit-box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.5);
   -moz-box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.5);
   box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.5);
+  cursor: pointer;
   display: inline-block;
-  background-color: #b0b0b0;
-  background-image: -webkit-linear-gradient(top, #bfbfbf, #999999);
-  background-image: -moz-linear-gradient(top, #bfbfbf, #999999);
-  background-image: -ms-linear-gradient(top, #bfbfbf, #999999);
-  background-image: -o-linear-gradient(top, #bfbfbf, #999999);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#bfbfbf), to(#999999));
-  background-image: linear-gradient(top, #bfbfbf, #999999);
+  background-color: #e3e3e3;
+  background-image: -webkit-linear-gradient(top, #f2f2f2, #cccccc);
+  background-image: -moz-linear-gradient(top, #f2f2f2, #cccccc);
+  background-image: -ms-linear-gradient(top, #f2f2f2, #cccccc);
+  background-image: -o-linear-gradient(top, #f2f2f2, #cccccc);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f2f2f2), to(#cccccc));
+  background-image: linear-gradient(top, #f2f2f2, #cccccc);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(start-colorstr='#bfbfbf', end-colorstr='#999999', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(start-colorstr='#f2f2f2', end-colorstr='#cccccc', GradientType=0);
   margin-bottom: 10px;
   outline: none;
   -webkit-border-radius: 3px;
@@ -239,13 +271,26 @@
   border-radius: 3px;
   text-align: center;
   text-decoration: none;
-  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.4);
   vertical-align: middle;
+  color: #333333;
+  text-shadow: 0px 1px 0 #fff;
 }
 .arconix-button-silver:hover {
-  background: #8c8c8c;
-  color: #fff;
+  background: #c9c9c9;
+  background-color: #dbdbdb;
+  background-image: -webkit-linear-gradient(top, #cccccc, #f2f2f2);
+  background-image: -moz-linear-gradient(top, #cccccc, #f2f2f2);
+  background-image: -ms-linear-gradient(top, #cccccc, #f2f2f2);
+  background-image: -o-linear-gradient(top, #cccccc, #f2f2f2);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#cccccc), to(#f2f2f2));
+  background-image: linear-gradient(top, #cccccc, #f2f2f2);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(start-colorstr='#cccccc', end-colorstr='#f2f2f2', GradientType=0);
   text-decoration: none;
+}
+.arconix-button-silver:hover {
+  color: #333333;
+  text-shadow: 0px 1px 0 #dcddde;
 }
 /* Highlight
 ------------------------------------------------------------ */

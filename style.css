@@ -18,10 +18,10 @@
 
 	01 Defaults
 	02 Typography
-                - Font Color
-                - Font Family
-                - Font Size
-                - Font Miscellaneous
+        - Font Color
+        - Font Family
+        - Font Size
+        - Font Miscellaneous
 	04 Layout
 		- Structure
 		- 1152px CSS Grid
@@ -43,7 +43,11 @@
 	12 Forms & Buttons
 		- Gravity Forms
 	13 Images & Captions
-	14 Media Queries
+	14 Custom Plugins
+		- Post Type Archive
+		- Arconix Shortcodes
+		- Arconix Plugins
+	15 Media Queries
 		- max-width: 1024px
 		- max-width: 768px
 		- max-width: 480px
@@ -546,36 +550,6 @@ p.pages,
   padding: 32px;
   padding: 2rem;
 }
-.post-type-archive-plugins .entry,
-.post-type-archive-portfolio .entry {
-  float: left;
-  margin-left: 4.166666666%;
-  width: 30.555555555%;
-}
-.post-type-archive-plugins .entry:nth-child(3n-2),
-.post-type-archive-portfolio .entry:nth-child(3n-2) {
-  margin-left: 0;
-}
-.post-type-archive-plugins .entry-title,
-.post-type-archive-plugins .entry-title a {
-  font-size: 28px;
-  font-size: 1.75rem;
-}
-.post-type-archive-portfolio .entry-title,
-.post-type-archive-portfolio .entry-title a {
-  font-size: 18px;
-  font-size: 1.125rem;
-}
-.post-type-archive-portfolio .arconix-portfolio-featured-image img {
-  border: 5px solid #dddddd;
-}
-.post-type-archive-portfolio .arconix-portfolio-featured-image img:hover {
-  border-color: #759b3b;
-  -webkit-transition: all 0.1s ease-in-out;
-  -moz-transition: all 0.1s ease-in-out;
-  -o-transition: all 0.1s ease-in-out;
-  transition: all 0.1s ease-in-out;
-}
 /*
 05 Menus
 ---------------------------------------------------------------------------------------------------- */
@@ -662,6 +636,9 @@ p.pages,
   transition: all 0s ease-in-out;
 }
 .genesis-nav-menu .current-menu-item a {
+  border-bottom: 3px solid #759b3b;
+}
+.single-plugins ul.menu li.menu-plugins-archive a {
   border-bottom: 3px solid #759b3b;
 }
 ul.genesis-nav-menu li:hover > ul,
@@ -980,6 +957,70 @@ p.wp-caption-text {
   line-height: 1.2;
   margin-top: 12px;
   margin-top: 0.75rem;
+}
+/*
+14 Custom Plugin Post Type Archives
+---------------------------------------------------------------------------------------------------- */
+.post-type-archive-plugins .entry,
+.post-type-archive-portfolio .entry {
+  float: left;
+  margin-left: 4.166666666%;
+  width: 30.555555555%;
+}
+.post-type-archive-plugins .entry:nth-child(3n-2),
+.post-type-archive-portfolio .entry:nth-child(3n-2) {
+  margin-left: 0;
+}
+.post-type-archive-plugins .entry-title,
+.post-type-archive-plugins .entry-title a {
+  font-size: 28px;
+  font-size: 1.75rem;
+}
+.post-type-archive-portfolio .entry-title,
+.post-type-archive-portfolio .entry-title a {
+  font-size: 18px;
+  font-size: 1.125rem;
+}
+.post-type-archive-portfolio .arconix-portfolio-featured-image img {
+  border: 5px solid #dddddd;
+}
+.post-type-archive-portfolio .arconix-portfolio-featured-image img:hover {
+  border-color: #759b3b;
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+table.arconix-plugins-table {
+  border-spacing: 0;
+}
+table.arconix-plugins-table tbody td {
+  border-bottom: 1px solid #ccc;
+  padding: 4px 10px;
+}
+table.arconix-plugins-table tbody tr:last-child td {
+  border-bottom: 0px;
+}
+p.arconix-plugins-button-area {
+  margin: 24px 0 36px;
+  margin: 1.5rem 0 2.25em;
+}
+p.arconix-plugins-button-area a.arconix-button-demo {
+  margin-left: 16px;
+  margin-left: 1rem;
+}
+ul.arconix-plugin-resources li a {
+  background: url(images/sprites.png) transparent no-repeat;
+  padding-left: 22px;
+}
+ul.arconix-plugin-resources li a.arconix-plugin-help {
+  background-position: 0 -21px;
+}
+ul.arconix-plugin-resources li a.arconix-plugin-dev {
+  background-position: 0 -42px;
+}
+ul.arconix-plugin-resources li a.arconix-plugin-source {
+  background-position: 0 -63px;
 }
 /*
 14 Media Queries
