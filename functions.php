@@ -20,6 +20,9 @@ add_filter( 'genesis_footer_creds_text', 'arconix_footer_creds_text' );
 add_filter( 'genesis_comment_form_args', 'arconix_comment_form_args' );
 add_filter( 'arconix_button_shortcode_args', 'arconix_child_button_args' );
 add_filter( 'arconix_portfolio_defaults', 'arconix_child_portfolio_args' );
+add_filter( 'pre_register_arconix_plugins_css', __return_false );
+add_filter( 'pre_register_arconix_portfolio_css', __return_false );
+add_filter( 'pre_register_arconix_shortcodes_css', __return_false );
 
 // Add Structural Wraps
 add_theme_support( 'genesis-structural-wraps', array( 'header', 'inner', 'footer' ) );
