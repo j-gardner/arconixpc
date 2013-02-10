@@ -1012,6 +1012,9 @@ p.arconix-plugins-button-area a.arconix-button-demo {
 ul.arconix-plugin-resources li a {
   background: url(images/sprites.png) transparent no-repeat;
   padding-left: 22px;
+  padding-left: 1.375rem;
+  margin-left: 14px;
+  margin-left: 0.875rem;
 }
 ul.arconix-plugin-resources li a.arconix-plugin-help {
   background-position: 0 -21px;
