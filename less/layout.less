@@ -24,13 +24,13 @@
 /* 04b - 1152px CSS Grid ----------- */
 
 .sidebar,
-#header .widget-area {
+#title-area {
     width: 30.555555555%; /* 352px / 1152px */
 }
 
 .content-sidebar #content,
 .sidebar-content #content,
-#title-area {
+#header .widget-area {
     width: 65.277777777%; /* 752px / 1152px */
 }
 
@@ -148,6 +148,7 @@
 
 .post-info,
 .post-meta {
+    color: @gray-light;
     clear: both;
     line-height: 1.5;
 }
@@ -159,12 +160,13 @@
 
 .post-meta {
     border-top: 1px solid #ccc;
+    margin-top: 24px;
+    margin-top: 1.5rem;
     padding-top: 24px;
     padding-top: 1.5rem;
 }
 
 .post-comments {
-    //background: url(images/post-comments.png) no-repeat center left;
     margin-left: 16px;
     margin-left: 1rem;
     padding-left: 20px;
@@ -174,6 +176,12 @@
 .categories,
 .tags {
     display: block;
+}
+
+.categories {
+    float: left;
+    margin-right: 16px;
+    margin-right: 1rem;
 }
 
 /* 04g - Miscellaneous ----------- */
