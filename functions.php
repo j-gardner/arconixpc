@@ -20,6 +20,7 @@ add_filter( 'genesis_footer_creds_text', 'arconix_footer_creds_text' );
 add_filter( 'genesis_comment_form_args', 'arconix_comment_form_args' );
 add_filter( 'arconix_button_shortcode_args', 'arconix_child_button_args' );
 add_filter( 'arconix_portfolio_defaults', 'arconix_child_portfolio_args' );
+add_filter( 'widget_tag_cloud_args', 'arconix_tag_cloud_widget' );
 add_filter( 'pre_register_arconix_plugins_css', __return_false );
 add_filter( 'pre_register_arconix_portfolio_css', __return_false );
 add_filter( 'pre_register_arconix_shortcodes_css', __return_false );
@@ -185,10 +186,27 @@ function arconix_child_button_args( $defaults ) {
 /**
  * Modify the post type registration for the portfolio so we can use the CPT archive instead of the shortcode
  *
+ * @since 3.0
  * @param array $defaults
  * @return array $defaults
  */
 function arconix_child_portfolio_args( $defaults ) {
     $defaults['post_type']['args']['has_archive'] = true;
     return $defaults;
+}
+
+/**
+ * Modify the Tag Cloud parameters
+ *  
+ * @since 3.0
+ * @param  array $args 
+ * @return array $args
+ */
+function arconix_tag_cloud_widget( $args ) {
+    $args['largest'] = 16; //largest tag
+    $args['smallest'] = 16; //smallest tag
+    $args['unit'] = 'px'; //tag font unit
+    $args['format'] = 'list'; //ul with a class of wp-tag-cloud
+
+    return $args;
 }
