@@ -28,16 +28,16 @@ function arconix_single_plugin_filter( $content ) {
     $description =  $sections['description'];
     $installation = $sections['installation'];
     $screenshots =  $sections['screenshots'];
-    $changelog =    $sections['changelog'];
     $faq =          $sections['faq'];
+    $changelog =    $sections['changelog'];
 
     // Our page content
-    $content = '[tabs]';
+    $content  = '[tabs]';
     $content .= '[tab title="Description"]' . $description . '[/tab]';
     $content .= '[tab title="Installation"]' . $installation . '[/tab]';
     $content .= '[tab title="Screenshots"]' . $screenshots . '[/tab]';
-    $content .= '[tab title="Changelog"]' . $changelog . '[/tab]';
     $content .= '[tab title="FAQ"]' . $faq . '[/tab]';
+    $content .= '[tab title="Changelog"]' . $changelog . '[/tab]';
     $content .= '[/tabs]';
 
     return $content;
