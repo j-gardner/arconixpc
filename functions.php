@@ -77,8 +77,8 @@ genesis_register_sidebar( array(
  * @since 3.0
  */
 function arconix_post_type_supports() {
-    $post_types = array( 'plugins', 'portfolio' );
-    $supports = array( 'genesis-seo', 'genesis-simple-sidebars', 'genesis-layouts' );
+    $post_types = array( 'plugins', 'portfolio', 'testimonials' );
+    $supports = array( 'genesis-simple-sidebars', 'genesis-layouts' );
 
     foreach( $post_types as $post_type ) {
         if( ! post_type_exists( $post_type ) ) continue;
