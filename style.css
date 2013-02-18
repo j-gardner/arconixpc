@@ -992,6 +992,9 @@ p.wp-caption-text {
   font-size: 28px;
   font-size: 1.75rem;
 }
+.post-type-archive-plugins .entry-content p {
+  margin-bottom: 0;
+}
 .post-type-archive-portfolio h2.entry-title,
 .post-type-archive-portfolio h2.entry-title a {
   font-size: 18px;
@@ -1044,6 +1047,33 @@ ul.arconix-plugin-resources li a.arconix-plugin-source {
   font-size: 14px;
   font-style: italic;
 }
+/* Wraps around all the testimonials */
+/* Wraps around a single testimonial */
+.arconix-testimonial-wrap .avatar {
+  float: left;
+  margin-right: 8px;
+  margin-right: 0.5rem;
+}
+/* Around the testimonial blockquote and cite */
+.arconix-testimonial-content blockquote {
+  color: #333333;
+  font-style: italic;
+  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
+  padding: 0;
+}
+.arconix-testimonial-content cite {
+  font-size: 14px;
+  font-weight: bold;
+}
+.arconix-testimonial-content cite a {
+  color: #555555;
+  text-decoration: none;
+}
+.arconix-testimonial-content cite a:hover {
+  text-decoration: underline;
+}
+/* If there are no testimonials returned */
 /*
 14 Media Queries
 ---------------------------------------------------------------------------------------------------- */
