@@ -24,6 +24,7 @@ add_filter( 'widget_tag_cloud_args', 'arconix_tag_cloud_widget' );
 add_filter( 'pre_register_arconix_plugins_css', __return_false );
 add_filter( 'pre_register_arconix_portfolio_css', __return_false );
 add_filter( 'pre_register_arconix_shortcodes_css', __return_false );
+add_filter( 'pre_register_arconix_testimonials_css', __return_false );
 
 // Add Structural Wraps
 add_theme_support( 'genesis-structural-wraps', array( 'header', 'inner', 'footer' ) );

@@ -1,0 +1,38 @@
+/* Wraps around all the testimonials */
+.arconix-testimonials-wrap { }
+/* Wraps around a single testimonial */
+.arconix-testimonial-wrap {
+    .avatar {
+        float: left;
+        margin-right: 8px;
+        margin-right: 0.5rem;
+    }
+
+ }
+/* Around the testimonial blockquote and cite */
+.arconix-testimonial-content { 
+
+    blockquote { 
+        color: @gray-dark;
+        font-style: italic;
+        margin-bottom: 10px;
+        margin-bottom: 0.625rem;
+        padding: 0; 
+    }
+
+    cite {
+        font-size: 14px;
+        font-weight: bold;
+        a {
+            color: @gray;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+}
+/* If there are no testimonials returned */
+.arconix-testimonials-none { }
