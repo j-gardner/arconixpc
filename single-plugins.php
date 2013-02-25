@@ -33,9 +33,9 @@ function arconix_single_plugin_filter( $content ) {
 
     // Our page content
     $content  = '[tabs]';
-    $content .= '[tab title="Description"]' . $description . '[/tab]';
-    $content .= '[tab title="Installation"]' . $installation . '[/tab]';
+    $content .= '[tab title="Description"]' . $description . '[/tab]';    
     $content .= '[tab title="Screenshots"]' . $screenshots . '[/tab]';
+    $content .= '[tab title="Installation"]' . $installation . '[/tab]';
     $content .= '[tab title="FAQ"]' . $faq . '[/tab]';
     $content .= '[tab title="Changelog"]' . $changelog . '[/tab]';
     $content .= '[/tabs]';
