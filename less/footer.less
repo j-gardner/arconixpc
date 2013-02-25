@@ -13,12 +13,43 @@
     }
 
     .creds {
+        margin: 8px 0;
+        margin: 0.5rem 0;
     	text-align: right;
     }
 
-    .creds,
-    .gototop {
-    	margin: 8px 0;
-    	margin: 0.5rem 0;
+    #menu-footer-nav {
+        float: left;
+        width: 50%;
+
+        .contact,
+        .facebook,
+        .rss,
+        .twitter {
+            display: inline-block;
+            margin-right: 8px;
+            margin-right: 0.5rem;
+
+            a {
+                background: url(images/sprite_32x32.png) no-repeat;
+                display: block;
+                width: 32px;
+                height: 32px;
+                text-indent: -9999px;
+                .opacity( 70 );
+
+                &:hover { .opacity( 100 ); }
+            }
+        }
+
+        .facebook { margin-right: 0; /* to fix an alignment issue */ }
+
+        .contact a { background-position: -32px 0; }
+
+        .facebook a { background-position: -64px 0; }
+
+        .rss a { background-position: -192px 0; }
+
+        .twitter a { background-position: -256px 0; }
     }
 }
