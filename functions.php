@@ -7,16 +7,17 @@ define( 'CHILD_THEME_NAME', 'Arconix Computers' );
 define( 'CHILD_THEME_URL', 'http://arconixpc.com' );
 define( 'CHILD_THEME_VERSION', '3.0' );
 
+remove_action( 'genesis_before_loop', 'genesis_do_breadcrumbs' );
+remove_action( 'genesis_footer', 'genesis_do_footer' );
+
 add_action( 'init', 'arconix_post_type_supports' );
 add_action( 'wp_enqueue_scripts', 'arconix_load_scripts' );
 add_action( 'genesis_meta', 'arconix_add_viewport_meta_tag' );
+add_action( 'genesis_footer', 'arconix_do_footer' );
 
-remove_action( 'genesis_before_loop', 'genesis_do_breadcrumbs' );
-
+add_filter( 'arconix_do_footer_output', 'do_shortcode', 20 );
 add_filter( 'genesis_post_info', 'arconix_post_info' );
 add_filter( 'genesis_post_meta', 'arconix_post_meta' );
-add_filter( 'genesis_footer_backtotop_text', 'arconix_footer_backtotop_text' );
-add_filter( 'genesis_footer_creds_text', 'arconix_footer_creds_text' );
 add_filter( 'genesis_comment_form_args', 'arconix_comment_form_args' );
 add_filter( 'arconix_button_shortcode_args', 'arconix_child_button_args' );
 add_filter( 'arconix_portfolio_defaults', 'arconix_child_portfolio_args' );
@@ -44,32 +45,19 @@ genesis_unregister_layout( 'content-sidebar-sidebar' );
 genesis_unregister_layout( 'sidebar-content-sidebar' );
 genesis_unregister_layout( 'sidebar-sidebar-content' );
 genesis_unregister_layout( 'sidebar-content' );
-
-unregister_sidebar( 'sidebar-alt' ); // Remove Secondary sidebar
+unregister_sidebar( 'sidebar-alt' );
 
 // Add additional sidebar areas
 genesis_register_sidebar( array(
-    'id' => 'home-full',
-    'name' => __( 'Full Width Home', 'arconix' ),
+    'id' => 'home-top',
+    'name' => __( 'Home Top', 'arconix' ),
     'description' => __( 'This single area is the top widget area on the homepage.', 'arconix' )
 ) );
 
 genesis_register_sidebar( array(
-    'id' => 'home-left',
-    'name' => __( 'Home-Left', 'arconix' ),
-    'description' => __( 'This is the left-featured section on the homepage.', 'arconix' )
-) );
-
-genesis_register_sidebar( array(
-    'id' => 'home-right',
-    'name' => __( 'Home-Right', 'arconix' ),
-    'description' => __( 'This is the right-featured section on the homepage.', 'arconix' )
-) );
-
-genesis_register_sidebar( array(
     'id' => 'feature-block',
-    'name' => __( 'Feature-Footer', 'arconix' ),
-    'description' => __( 'This single area is below the home block.', 'arconix' )
+    'name' => __( 'Feature Block', 'arconix' ),
+    'description' => __( 'This single area is below home top.', 'arconix' )
 ) );
 
 /**
@@ -117,17 +105,6 @@ function arconix_add_viewport_meta_tag() {
 }
 
 /**
- * Modify the "Return to Top" footer text
- *
- * @since 3.0
- * @param string $backtotop
- * @return string
- */
-function arconix_footer_backtotop_text( $backtotop ) {
-    return '[footer_copyright] <a href="http://arcnx.co/1" class="arconix-footer-site-link">' . CHILD_THEME_NAME . '</a>';
-}
-
-/**
  * Modify the Post Info text
  *
  * @since 3.0
@@ -150,14 +127,16 @@ function arconix_post_meta( $post_meta ) {
 }
 
 /**
- * Modify the Credits footer text
+ * Custom Footer
  *
  * @since 3.0
- * @param string $creds
- * @return string
  */
-function arconix_footer_creds_text( $creds ) {
-    return 'Powered by [footer_wordpress_link] and <a href="http://studiopress.com/themes/genesis">Genesis</a> | Hosted by <a href="http://arcnx.co/ix">IX Webhosting</a> | [footer_loginout]';
+function arconix_do_footer() {
+   $backtotop_text = wp_nav_menu( array('menu' => 'Footer Nav' ) );
+   $creds_text = 'Powered by [footer_wordpress_link] and <a href="http://studiopress.com/themes/genesis">Genesis</a> | Hosted by <a href="http://arcnx.co/ix">IX Webhosting</a> | [footer_loginout]';
+   $output = $backtotop_text . '<div class="creds">' . $creds_text . '</div>';
+   
+   echo apply_filters( 'arconix_do_footer_output', $output );
 }
 
 /**
