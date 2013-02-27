@@ -36,8 +36,10 @@
         }
     }
 
-    .img( @border: @gray-lighter, @hover: @base ) {
-        border: 5px solid @border;
+    .img( @size: 3px, @border: @gray-light, @hover: @base ) {
+        background-color: #fff;
+        padding: 1px;
+        border: @size solid @border;
 
         &:hover {
             border-color: @hover;
