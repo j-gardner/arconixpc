@@ -32,7 +32,7 @@ video {
 }
 
 img {
-    border: 5px solid #ddd;
+    #arconix > .img( @border: #ddd, @hover: #ddd );
     height: auto;
 
     &.alignnone {
@@ -41,6 +41,8 @@ img {
         margin-bottom: 0.75rem;
     }
 }
+
+a img { #arconix > .img( @border: #ddd ); } // For images that are part of hyperlinks
 
 img.centered,
 .aligncenter {
