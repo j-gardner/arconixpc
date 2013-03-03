@@ -7,7 +7,7 @@ add_action( 'genesis_meta', 'arconix_home_genesis_meta' );
 function arconix_home_genesis_meta() {
     if( is_active_sidebar( 'home-top' ) || is_active_sidebar( 'home-bottom' ) ) {
         remove_action( 'genesis_loop', 'genesis_do_loop' );
-        add_action( 'genesis_before_loop' , 'arconix_before_home_loop_helper' );
+        add_action( 'genesis_before_loop' , 'arconix_home_loop_helper' );
         add_filter( 'genesis_pre_get_option_site_layout', '__genesis_return_full_width_content' );
     }
 }
