@@ -34,7 +34,7 @@ add_theme_support( 'genesis-structural-wraps', array( 'header', 'inner', 'footer
 remove_theme_support( 'genesis-menus' );
 
 // Add our own Image size for the portfolio
-add_image_size( 'arconix-thumb', 320, 200, TRUE ); 
+add_image_size( 'arconix-thumb', 320, 200 ); 
 
 // Sets Content Width
 $content_width = apply_filters( 'content_width', 740, 740, 1140 );
