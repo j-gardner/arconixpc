@@ -1136,6 +1136,39 @@ ul.arconix-plugin-resources li a.arconix-plugin-source {
   text-decoration: underline;
 }
 /* If there are no testimonials returned */
+.feature-block {
+  margin-top: 60px;
+  margin-top: 3.75rem;
+}
+.home .feature-boxes-item {
+  float: left;
+  margin-left: 4.166666666%;
+  width: 30.555555555%;
+}
+.home #feature-box-1 {
+  margin-left: 0;
+}
+.feature-box-image img {
+  background-color: transparent;
+  border: 0px;
+  display: block;
+  margin: 0 auto;
+}
+.feature-box-title {
+  border-bottom: 1px solid #ddd;
+  position: relative;
+  text-align: center;
+}
+.feature-box-title span {
+  background: url(images/inner.png) transparent repeat;
+  padding: 0 12px;
+  padding: 0 0.75rem;
+  position: relative;
+  top: 10px;
+}
+.feature-box-content {
+  line-height: 1.625;
+}
 /*
 14 Media Queries
 ---------------------------------------------------------------------------------------------------- */
