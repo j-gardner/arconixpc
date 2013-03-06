@@ -1034,6 +1034,16 @@ p.wp-caption-text {
   margin-top: 12px;
   margin-top: 0.75rem;
 }
+.home-top h2 {
+  font-size: 35px;
+  font-family: 'Rock Salt', cursive;
+  margin: 5px 0 60px;
+  margin: 0.3125rem 0 3.75rem;
+}
+.home-top img {
+  background-color: transparent;
+  border: 0px;
+}
 /*
 14 Custom Plugin Post Type Archives
 ---------------------------------------------------------------------------------------------------- */
@@ -1120,8 +1130,8 @@ ul.arconix-plugin-resources li a.arconix-plugin-source {
 .arconix-testimonial-content blockquote {
   color: #333333;
   font-style: italic;
-  margin-bottom: 10px;
-  margin-bottom: 0.625rem;
+  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
   padding: 0;
 }
 .arconix-testimonial-content cite {
@@ -1136,6 +1146,29 @@ ul.arconix-plugin-resources li a.arconix-plugin-source {
   text-decoration: underline;
 }
 /* If there are no testimonials returned */
+.home .arconix-testimonial-wrap {
+  background: #efefef url(images/quote.png) no-repeat 110px 32px;
+  border-top: 3px solid #ddd;
+  border-bottom: 3px solid #ddd;
+  overflow: hidden;
+  padding: 42px 80px 42px 175px;
+  padding: 2.625rem 5rem 2.625rem 10.9375rem;
+}
+.home .arconix-testimonial-wrap blockquote,
+.home .arconix-testimonial-wrap cite {
+  color: #555;
+  font-size: 18px;
+  line-height: 1.625;
+}
+.home .arconix-testimonial-wrap cite {
+  color: #777;
+  font-style: italic;
+  font-weight: 400;
+  float: right;
+}
+.home .arconix-testimonial-wrap cite a {
+  color: #777;
+}
 .feature-block {
   margin-top: 60px;
   margin-top: 3.75rem;
