@@ -1,8 +1,21 @@
 <?php
 add_action( 'genesis_meta', 'arconix_home_genesis_meta' );
+add_action( 'wp_enqueue_scripts', 'arconix_load_home_scripts' );
+
+/**
+ * Load in a custom google font for just the home page
+ * 
+ * @since 3.0
+ */
+function arconix_load_home_scripts() {
+	wp_enqueue_style( 'google-fonts-home', 'http://fonts.googleapis.com/css?family=Rock+Salt', false, CHILD_THEME_VERSION );
+}
+
+
 /**
  * Add widget support for homepage. If no widgets active, display the default loop.
- *
+ * 
+ * @since 3.0
  */
 function arconix_home_genesis_meta() {
     if( is_active_sidebar( 'home-top' ) || is_active_sidebar( 'home-bottom' ) ) {
@@ -12,6 +25,11 @@ function arconix_home_genesis_meta() {
     }
 }
 
+/**
+ * Define our home page widget areas
+ *
+ * @since 3.0
+ */
 function arconix_home_loop_helper() {
     genesis_widget_area( 'home-top', array( 'before' => '<div class="home-top">' ) );
 
