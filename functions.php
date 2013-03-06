@@ -79,17 +79,12 @@ function arconix_post_type_supports() {
 }
 
 /**
- * Load Google fonts and unregister superfish
+ * Load Google fonts
  *
  * @since 3.0
  */
 function arconix_load_scripts() {
-    wp_enqueue_style(
-        'google-fonts',
-        'http://fonts.googleapis.com/css?family=Droid+Sans|Droid+Serif',
-        false,
-        CHILD_THEME_VERSION
-    );
+    wp_enqueue_style( 'google-fonts', 'http://fonts.googleapis.com/css?family=Droid+Sans|Droid+Serif', false, CHILD_THEME_VERSION );
 }
 
 /**
