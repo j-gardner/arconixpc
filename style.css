@@ -43,11 +43,12 @@
 	12 Forms & Buttons
 		- Gravity Forms
 	13 Images & Captions
-	14 Custom Plugins
+	14 Home Customizations
+	15 Custom Plugins
 		- Post Type Archive
 		- Arconix Shortcodes
 		- Arconix Plugins
-	15 Media Queries
+	16 Media Queries
 		- max-width: 1024px
 		- max-width: 768px
 		- max-width: 480px
@@ -1034,15 +1035,20 @@ p.wp-caption-text {
   margin-top: 12px;
   margin-top: 0.75rem;
 }
-.home-top h2 {
+/*
+14 Home Customizations
+---------------------------------------------------------------------------------------------------- */
+.home h2 {
   font-size: 35px;
   font-family: 'Rock Salt', cursive;
-  margin: 5px 0 60px;
-  margin: 0.3125rem 0 3.75rem;
+  margin: 10px 0 65px;
+  margin: 0.625rem 0 4.0625rem;
 }
-.home-top img {
+.home img {
   background-color: transparent;
   border: 0px;
+  margin-bottom: 80px;
+  margin-bottom: 5rem;
 }
 /*
 14 Custom Plugin Post Type Archives
@@ -1159,12 +1165,11 @@ ul.arconix-plugin-resources li a.arconix-plugin-source {
 }
 .home .arconix-testimonial-wrap blockquote,
 .home .arconix-testimonial-wrap cite {
-  color: #555;
+  color: #777;
   font-size: 18px;
   line-height: 1.625;
 }
 .home .arconix-testimonial-wrap cite {
-  color: #777;
   font-style: italic;
   font-weight: 400;
   float: right;
