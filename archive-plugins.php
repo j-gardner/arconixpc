@@ -17,7 +17,7 @@ remove_action( 'genesis_before_post_content', 'genesis_post_info' );
  * @global object $post
  * @param string $post_meta
  * @return string $post_meta
- * @since 0.5
+ * @since 3.0
  */
 function arconix_plugin_archive_post_meta( $post_meta ){
     global $post;
@@ -38,7 +38,7 @@ function arconix_plugin_archive_post_meta( $post_meta ){
  *
  * @param array $query
  * @return array $query
- * @since 0.5
+ * @since 3.0
  */
 function arconix_plugin_archive_change_order( $query ) {
     $query->set( 'orderby', 'title' );
@@ -50,7 +50,7 @@ function arconix_plugin_archive_change_order( $query ) {
 /**
  * Display the Post Type Archive Title
  *
- * @since 0.5
+ * @since 3.0
  */
 function arconix_before_loop() {
     echo '<h1 class="entry-title">WordPress Plugins</h1>';

@@ -1,7 +1,13 @@
 <?php
+/**
+ * Page template for the single Plugins Post Type item
+ *
+ * @since  3.0
+ */
 remove_action( 'genesis_before_post_content', 'genesis_post_info' );
 remove_action( 'genesis_after_post_content', 'genesis_post_meta' );
 remove_action( 'genesis_after_post', 'genesis_do_author_box_single' );
+
 add_filter( 'arconix_plugins_content_filter', 'arconix_single_plugin_filter' );
 
 /**

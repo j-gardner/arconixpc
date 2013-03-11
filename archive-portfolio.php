@@ -35,7 +35,7 @@ function arconix_portfolio_archive_image() {
 /**
  * Display the Post Type Archive Title
  *
- * @since 0.5
+ * @since 3.0
  */
 function arconix_before_loop() {
     echo '<h1 class="entry-title">Portfolio</h1>';
