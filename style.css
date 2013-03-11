@@ -43,9 +43,10 @@
 	12 Forms & Buttons
 		- Gravity Forms
 	13 Images & Captions
-	14 Home Customizations
+	14 Home and other Page Customizations
 	15 Custom Plugins
 		- Post Type Archive
+		- Arconix Feature Boxes
 		- Arconix Shortcodes
 		- Arconix Plugins
 	16 Media Queries
@@ -1049,6 +1050,33 @@ p.wp-caption-text {
   border: 0px;
   margin-bottom: 80px;
   margin-bottom: 5rem;
+}
+.home-top .page p {
+  font-size: 24px;
+  font-family: 'Rock Salt', cursive;
+}
+.services-grid .service {
+  width: 50%;
+  float: left;
+  padding: 52px 0 32px;
+  padding: 3.25rem 0 2rem;
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.services-grid .service h2 {
+  padding-left: 96px;
+  padding-left: 6rem;
+  height: 65px;
+  margin-bottom: 44px;
+  margin-bottom: 2.75rem;
+}
+.services-grid .website-design h2 {
+  background: transparent url(images/web-design.png) no-repeat;
+}
+.services-grid .tech-consulting h2 {
+  background: transparent url(images/tech-consulting.png) no-repeat;
 }
 /*
 14 Custom Plugin Post Type Archives
