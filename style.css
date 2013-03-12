@@ -417,7 +417,6 @@ code {
 /* 04c - Header ----------- */
 #header {
   border-bottom: 2px solid #ffffff;
-  height: 70px;
   overflow: hidden;
   padding-bottom: 10px;
   padding-bottom: 0.625rem;
@@ -1050,6 +1049,11 @@ p.wp-caption-text {
   border: 0px;
   margin-bottom: 80px;
   margin-bottom: 5rem;
+}
+.home .textwidget {
+  margin: 64px 0 80px;
+  margin: 4rem 0 5rem;
+  text-align: center;
 }
 .home-top .page p {
   font-size: 24px;
