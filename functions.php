@@ -98,10 +98,10 @@ function arconix_add_viewport_meta_tag() {
 
 /**
  * Hook in before the main query is run and modify some values
- * 
+ *
+ * @since 3.0
  * @param  array $query
  * @return void
- * @since 3.0
  */
 function arconix_pre_get_posts( $query ) {
     if ( is_admin() || ! $query->is_main_query() )
@@ -196,14 +196,17 @@ function arconix_child_portfolio_args( $defaults ) {
  * Modify the Tag Cloud parameters
  *  
  * @since 3.0
+ * @version  3.0.1
  * @param  array $args 
  * @return array $args
  */
 function arconix_tag_cloud_widget( $args ) {
-    $args['largest'] = 16; //largest tag
-    $args['smallest'] = 16; //smallest tag
-    $args['unit'] = 'px'; //tag font unit
-    $args['format'] = 'list'; //ul with a class of wp-tag-cloud
+    $args['largest'] =  16; // largest tag
+    $args['smallest'] = 16; // smallest tag
+    $args['unit'] = 'px'; // tag font unit
+    $args['format'] = 'list'; // ul with a class of wp-tag-cloud
+    $args['orderby'] = 'count'; // sort by count
+    $args['number'] = 5; // set the number of tags to display
 
     return $args;
 }
