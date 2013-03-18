@@ -3,7 +3,6 @@
  * The Plugins post type archive template
  */
 add_filter( 'genesis_pre_get_option_site_layout', '__genesis_return_full_width_content' );
-add_filter( 'pre_get_posts', 'arconix_plugin_archive_change_order' );
 add_filter( 'genesis_post_meta', 'arconix_plugin_archive_post_meta' );
 
 add_action( 'genesis_before_loop', 'arconix_before_loop' );
@@ -31,20 +30,6 @@ function arconix_plugin_archive_post_meta( $post_meta ){
     $post_meta = 'Version: ' . $details->version . ' | Downloads: ' . $details->downloaded;
 
     return $post_meta;
-}
-
-/**
- * Change the Sort Order on the "Plugins" archive
- *
- * @param array $query
- * @return array $query
- * @since 3.0
- */
-function arconix_plugin_archive_change_order( $query ) {
-    $query->set( 'orderby', 'title' );
-    $query->set( 'order', 'asc' );
-
-    return $query;
 }
 
 /**

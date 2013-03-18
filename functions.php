@@ -14,7 +14,7 @@ add_action( 'init', 'arconix_post_type_supports' );
 add_action( 'wp_enqueue_scripts', 'arconix_load_scripts' );
 add_action( 'genesis_meta', 'arconix_add_viewport_meta_tag' );
 add_action( 'genesis_footer', 'arconix_do_footer' );
-
+add_filter( 'pre_get_posts', 'arconix_pre_get_posts' );
 add_filter( 'arconix_do_footer_output', 'do_shortcode', 20 );
 add_filter( 'genesis_post_info', 'arconix_post_info' );
 add_filter( 'genesis_post_meta', 'arconix_post_meta' );
@@ -94,6 +94,31 @@ function arconix_load_scripts() {
  */
 function arconix_add_viewport_meta_tag() {
     echo '<meta name="viewport" content="width=device-width, initial-scale=1.0"/>';
+}
+
+/**
+ * Hook in before the main query is run and modify some values
+ * 
+ * @param  array $query
+ * @return void
+ * @since 3.0
+ */
+function arconix_pre_get_posts( $query ) {
+    if ( is_admin() || ! $query->is_main_query() )
+        return;
+
+    if ( is_post_type_archive( 'portfolio' ) ) {
+        $query->set( 'posts_per_page', 9 );
+        return;
+    }
+
+    if ( is_post_type_archive( 'plugin' ) ) {
+        $query->set( 'orderby', 'title' );
+        $query->set( 'order', 'asc' );
+        $query->set( 'posts_per_page', -1 );
+        return;
+    }
+
 }
 
 /**
