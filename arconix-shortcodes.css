@@ -120,12 +120,10 @@
   background-color: #107beb;
   background-image: -webkit-linear-gradient(top, #1b8aff, #0064cd);
   background-image: -moz-linear-gradient(top, #1b8aff, #0064cd);
-  background-image: -ms-linear-gradient(top, #1b8aff, #0064cd);
   background-image: -o-linear-gradient(top, #1b8aff, #0064cd);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#1b8aff), to(#0064cd));
   background-image: linear-gradient(top, #1b8aff, #0064cd);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(start-colorstr='#1b8aff', end-colorstr='#0064cd', GradientType=0);
   margin-bottom: 10px;
   outline: none;
   -webkit-border-radius: 3px;
@@ -143,12 +141,10 @@
   background-color: #0b73e1;
   background-image: -webkit-linear-gradient(top, #0064cd, #1b8aff);
   background-image: -moz-linear-gradient(top, #0064cd, #1b8aff);
-  background-image: -ms-linear-gradient(top, #0064cd, #1b8aff);
   background-image: -o-linear-gradient(top, #0064cd, #1b8aff);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0064cd), to(#1b8aff));
   background-image: linear-gradient(top, #0064cd, #1b8aff);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(start-colorstr='#0064cd', end-colorstr='#1b8aff', GradientType=0);
   text-decoration: none;
 }
 .arconix-button-blue:hover {
@@ -167,12 +163,10 @@
   background-color: #8cb351;
   background-image: -webkit-linear-gradient(top, #9cc260, #759b3b);
   background-image: -moz-linear-gradient(top, #9cc260, #759b3b);
-  background-image: -ms-linear-gradient(top, #9cc260, #759b3b);
   background-image: -o-linear-gradient(top, #9cc260, #759b3b);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#9cc260), to(#759b3b));
   background-image: linear-gradient(top, #9cc260, #759b3b);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(start-colorstr='#9cc260', end-colorstr='#759b3b', GradientType=0);
   margin-bottom: 10px;
   outline: none;
   -webkit-border-radius: 3px;
@@ -190,12 +184,10 @@
   background-color: #84ab4a;
   background-image: -webkit-linear-gradient(top, #759b3b, #9cc260);
   background-image: -moz-linear-gradient(top, #759b3b, #9cc260);
-  background-image: -ms-linear-gradient(top, #759b3b, #9cc260);
   background-image: -o-linear-gradient(top, #759b3b, #9cc260);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#759b3b), to(#9cc260));
   background-image: linear-gradient(top, #759b3b, #9cc260);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(start-colorstr='#759b3b', end-colorstr='#9cc260', GradientType=0);
   text-decoration: none;
 }
 .arconix-button-green:hover {
@@ -214,12 +206,10 @@
   background-color: #c13227;
   background-image: -webkit-linear-gradient(top, #d83a2e, #9d261d);
   background-image: -moz-linear-gradient(top, #d83a2e, #9d261d);
-  background-image: -ms-linear-gradient(top, #d83a2e, #9d261d);
   background-image: -o-linear-gradient(top, #d83a2e, #9d261d);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#d83a2e), to(#9d261d));
   background-image: linear-gradient(top, #d83a2e, #9d261d);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(start-colorstr='#d83a2e', end-colorstr='#9d261d', GradientType=0);
   margin-bottom: 10px;
   outline: none;
   -webkit-border-radius: 3px;
@@ -237,12 +227,10 @@
   background-color: #b52e24;
   background-image: -webkit-linear-gradient(top, #9d261d, #d83a2e);
   background-image: -moz-linear-gradient(top, #9d261d, #d83a2e);
-  background-image: -ms-linear-gradient(top, #9d261d, #d83a2e);
   background-image: -o-linear-gradient(top, #9d261d, #d83a2e);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#9d261d), to(#d83a2e));
   background-image: linear-gradient(top, #9d261d, #d83a2e);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(start-colorstr='#9d261d', end-colorstr='#d83a2e', GradientType=0);
   text-decoration: none;
 }
 .arconix-button-red:hover {
@@ -261,12 +249,10 @@
   background-color: #e3e3e3;
   background-image: -webkit-linear-gradient(top, #f2f2f2, #cccccc);
   background-image: -moz-linear-gradient(top, #f2f2f2, #cccccc);
-  background-image: -ms-linear-gradient(top, #f2f2f2, #cccccc);
   background-image: -o-linear-gradient(top, #f2f2f2, #cccccc);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f2f2f2), to(#cccccc));
   background-image: linear-gradient(top, #f2f2f2, #cccccc);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(start-colorstr='#f2f2f2', end-colorstr='#cccccc', GradientType=0);
   margin-bottom: 10px;
   outline: none;
   -webkit-border-radius: 3px;
@@ -284,12 +270,10 @@
   background-color: #dbdbdb;
   background-image: -webkit-linear-gradient(top, #cccccc, #f2f2f2);
   background-image: -moz-linear-gradient(top, #cccccc, #f2f2f2);
-  background-image: -ms-linear-gradient(top, #cccccc, #f2f2f2);
   background-image: -o-linear-gradient(top, #cccccc, #f2f2f2);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#cccccc), to(#f2f2f2));
   background-image: linear-gradient(top, #cccccc, #f2f2f2);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(start-colorstr='#cccccc', end-colorstr='#f2f2f2', GradientType=0);
   text-decoration: none;
 }
 .arconix-button-silver:hover {

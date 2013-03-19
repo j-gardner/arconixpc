@@ -69,12 +69,12 @@
     	background-color: mix( @start-color, @end-color, 60% );
         background-image: -webkit-linear-gradient( left, @start-color, @end-color ); // Safari 5.1+, Chrome 10+
            background-image: -moz-linear-gradient( left, @start-color, @end-color ); // FF 3.6+
-            background-image: -ms-linear-gradient( left, @start-color, @end-color ); // IE10
+            //background-image: -ms-linear-gradient( left, @start-color, @end-color ); // IE10
              background-image: -o-linear-gradient( left, @start-color, @end-color ); // Opera 11.10
                background-image: -webkit-gradient( linear, 0 0, 100% 0, from( @start-color ), to( @end-color ) ); // Safari 4+, Chrome 2+
                 background-image: linear-gradient( left, @start-color, @end-color ); // The standard
         background-repeat: repeat-x;
-        filter: e( %( "progid:DXImageTransform.Microsoft.gradient(start-colorstr='%d', end-colorstr='%d', GradientType=1)", @start-color, @end-color ) ); // IE9 and down
+        //filter: e( %( "progid:DXImageTransform.Microsoft.gradient(start-colorstr='%d', end-colorstr='%d', GradientType=1)", @start-color, @end-color ) ); // IE9 and down
     }
 
     // Vertical Gradient
@@ -86,12 +86,12 @@
         background-color: mix( @start-color, @end-color, 60% );
         background-image: -webkit-linear-gradient( top, @start-color, @end-color ); // Safari 5.1+, Chrome 10+
            background-image: -moz-linear-gradient( top, @start-color, @end-color ); // FF 3.6+
-            background-image: -ms-linear-gradient( top, @start-color, @end-color ); // IE10
+            //background-image: -ms-linear-gradient( top, @start-color, @end-color ); // IE10
              background-image: -o-linear-gradient( top, @start-color, @end-color ); // Opera 11.10
                background-image: -webkit-gradient( linear, 0 0, 0 100%, from( @start-color ), to( @end-color ) ); // Safari 4+, Chrome 2+
                 background-image: linear-gradient( top, @start-color, @end-color ); // The standard
         background-repeat: repeat-x;
-	    filter: e( %( "progid:DXImageTransform.Microsoft.gradient(start-colorstr='%d', end-colorstr='%d', GradientType=0)", @start-color, @end-color ) ); // IE9 and down
+	    //filter: e( %( "progid:DXImageTransform.Microsoft.gradient(start-colorstr='%d', end-colorstr='%d', GradientType=0)", @start-color, @end-color ) ); // IE9 and down
     }
 
     // Directional Gradient
