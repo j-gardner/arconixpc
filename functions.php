@@ -14,6 +14,7 @@ add_action( 'init', 'arconix_post_type_supports' );
 add_action( 'wp_enqueue_scripts', 'arconix_load_scripts' );
 add_action( 'genesis_meta', 'arconix_add_viewport_meta_tag' );
 add_action( 'genesis_footer', 'arconix_do_footer' );
+
 add_filter( 'pre_get_posts', 'arconix_pre_get_posts' );
 add_filter( 'arconix_do_footer_output', 'do_shortcode', 20 );
 add_filter( 'genesis_post_info', 'arconix_post_info' );
@@ -201,12 +202,13 @@ function arconix_child_portfolio_args( $defaults ) {
  * @return array $args
  */
 function arconix_tag_cloud_widget( $args ) {
-    $args['largest'] =  16; // largest tag
-    $args['smallest'] = 16; // smallest tag
-    $args['unit'] = 'px'; // tag font unit
-    $args['format'] = 'list'; // ul with a class of wp-tag-cloud
-    $args['orderby'] = 'count'; // sort by count
-    $args['number'] = 5; // set the number of tags to display
+    $args['largest']    = 16;       // largest tag
+    $args['smallest']   = 16;       // smallest tag
+    $args['unit']       = 'px';     // tag font unit
+    $args['format']     = 'list';   // ul with a class of wp-tag-cloud
+    $args['orderby']    = 'count';  // sort by count
+    $oargs['order']     = 'DESC';   // largest to smallest
+    $args['number']     = 5;        // set the number of tags to display
 
     return $args;
 }
