@@ -20,6 +20,7 @@ remove_action( 'genesis_after_post_content', 'genesis_post_meta' );
  * @return n/a Return early if the portfolio item doesn't have an image
  */
 function arconix_portfolio_archive_image() {
+	global $post;
     if( ! has_post_thumbnail() ) return;
 
     // Get the url to the 'large' image
@@ -27,7 +28,7 @@ function arconix_portfolio_archive_image() {
 
     echo '<div class="arconix-portfolio-featured-image">';
     echo '<a href="' . esc_url( $_portfolio_img_url[0] ) . '" title="' . the_title_attribute( 'echo=0' ) . '">';
-    echo get_the_post_thumbnail( $thumbnail->ID, 'arconix-thumb' );
+    echo get_the_post_thumbnail( $post->ID, 'arconix-thumb' );
     echo '</a>';
     echo '</div>';
 }
