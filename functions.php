@@ -220,7 +220,5 @@ function arconix_tag_cloud_widget( $args ) {
  * @since 3.0.1
  */
 function arconix_fix_comments_links() {
-    ?>
-    <div id="comments"></div>
-    <?php
+    echo '<div id="comments"></div>';
 }
