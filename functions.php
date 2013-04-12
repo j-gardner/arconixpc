@@ -5,7 +5,7 @@ require_once( TEMPLATEPATH . '/lib/init.php' );
 // Child theme (do not remove)
 define( 'CHILD_THEME_NAME', 'Arconix Computers' );
 define( 'CHILD_THEME_URL', 'http://arconixpc.com' );
-define( 'CHILD_THEME_VERSION', '3.0' );
+define( 'CHILD_THEME_VERSION', '3.0.2' );
 
 remove_action( 'genesis_before_loop', 'genesis_do_breadcrumbs' );
 remove_action( 'genesis_footer', 'genesis_do_footer' );
