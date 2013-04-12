@@ -5,7 +5,7 @@
     Author:         John Gardner
     Author URI:     http://arconixpc.com/
 
-    Version:        3.0
+    Version:        3.0.2
 
     Template:       genesis
     Template        Version: 1.9.1
@@ -1139,6 +1139,8 @@ p.wp-caption-text {
 .post-type-archive-portfolio .entry {
   float: left;
   margin-left: 4.166666666%;
+  margin-bottom: 60px;
+  margin-bottom: 3.75rem;
   width: 30.555555555%;
 }
 .post-type-archive-plugins .entry:nth-child(3n-1),
