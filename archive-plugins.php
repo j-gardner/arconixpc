@@ -27,7 +27,7 @@ function arconix_plugin_archive_post_meta( $post_meta ){
 
     if( ! $details ) return;
 
-    $post_meta = 'Version: ' . $details->version . ' | Downloads: ' . $details->downloaded;
+    $post_meta = 'Version: ' . $details->version . ' | Downloads: ' . number_format( $details->downloaded );
 
     return $post_meta;
 }
