@@ -1229,37 +1229,36 @@ p.wp-caption-text {
 .arconix-box-tip {
   padding: 16px 20px 16px 56px;
   padding: 1rem 1.25rem 1rem 3.5rem;
-  background-repeat: no-repeat;
 }
 .arconix-box-alert {
-  background: url(../../plugins/arconix-shortcodes/images/box-alert.png) 16px;
+  background: url(../../plugins/arconix-shortcodes/images/box-alert.png) 16px no-repeat;
   background-color: #ffdfdf;
   border-color: #feadad;
   color: #c51a00;
 }
 .arconix-box-comment {
-  background: url(../../plugins/arconix-shortcodes/images/box-comment.png) 16px;
+  background: url(../../plugins/arconix-shortcodes/images/box-comment.png) 16px no-repeat;
   background-color: #fef8e1;
   border-color: #fcecb0;
   color: #c0b206;
 }
 .arconix-box-download {
-  background: url(../../plugins/arconix-shortcodes/images/box-download.png) 16px;
+  background: url(../../plugins/arconix-shortcodes/images/box-download.png) 16px no-repeat;
   background-color: #f2f9e5;
   border-color: #ddefbc;
   color: #65a025;
 }
 .arconix-box-info {
-  background: url(../../plugins/arconix-shortcodes/images/box-info.png) 16px;
+  background: url(../../plugins/arconix-shortcodes/images/box-info.png) 16px no-repeat;
   background-color: #dbe7f8;
   border-color: #b1cbef;
   color: #1e429c;
 }
 .arconix-box-tip {
-  background: url(../../plugins/arconix-shortcodes/images/box-tip.png) 16px;
+  background: url(../../plugins/arconix-shortcodes/images/box-tip.png) 16px no-repeat;
   background-color: #ffffd5;
   border-color: #fefea3;
-  color: #a2bc00;
+  color: #9e660d;
 }
 /* Button Styling
 ------------------------------------------------------------ */
@@ -1696,6 +1695,9 @@ ul.arconix-plugin-resources li a.arconix-plugin-source {
 .feature-box-button-area {
   margin-top: 20px;
   margin-top: 1.25rem;
+}
+.gist {
+    margin-bottom: 45px;
 }
 /*
 14 Media Queries
