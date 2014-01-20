@@ -101,6 +101,7 @@ function arconix_add_viewport_meta_tag() {
 /**
  * Hook in before the main query is run and modify some values
  *
+ * @version 3.1
  * @since 3.0
  * @param  array $query
  * @return void
@@ -118,6 +119,11 @@ function arconix_pre_get_posts( $query ) {
         $query->set( 'orderby', 'title' );
         $query->set( 'order', 'asc' );
         $query->set( 'posts_per_page', -1 );
+        return;
+    }
+
+    if ( is_post_type_archive( 'docs' ) ) {
+        $query->set( 'post_parent', 0 );
         return;
     }
 
