@@ -7,8 +7,10 @@
 
 remove_filter( 'genesis_post_info', 'arconix_post_info' );
 remove_filter( 'genesis_post_meta', 'arconix_post_meta' );
-add_filter( 'genesis_post_info', '__return_null' );
-add_filter( 'genesis_post_meta', 'arconix_docs_meta' );
+
+//add_filter( 'genesis_post_meta', 'arconix_docs_meta' );
+
+remove_action( 'genesis_before_post_content', 'genesis_post_info' );
 
 /**
  * Modify the Post Meta text
@@ -22,3 +24,4 @@ function arconix_docs_meta( $post_meta ) {
 
     return $return;
 }
+genesis();
