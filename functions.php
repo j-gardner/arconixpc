@@ -86,7 +86,7 @@ function arconix_post_type_supports() {
  * @since 3.0
  */
 function arconix_load_scripts() {
-    wp_enqueue_style( 'google-fonts', 'http://fonts.googleapis.com/css?family=Droid+Sans|Droid+Serif', false, CHILD_THEME_VERSION );
+    wp_enqueue_style( 'google-fonts', 'http://fonts.googleapis.com/css?family=Droid+Sans|Droid+Serif', false, $CHILD_THEME_VERSION );
 }
 
 /**
@@ -137,7 +137,7 @@ function arconix_pre_get_posts( $query ) {
  * @return string
  */
 function arconix_post_info( $post_info ) {
-    return '[post_date] [post_comments] [post_edit]';
+    return '[post_date] [post_edit before=" | "]';
 }
 
 /**
